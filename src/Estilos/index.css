@@ -1,0 +1,894 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(SeccaoDeIntroducao.css);
+
+:root[theme="claro"] {
+    --cor-branca: #fff;
+    --cor-azul: #0092ed;
+    --cor-azul-claro: #0092ed3e;
+    --cor-cinza: #676767;
+    --cor-cinza-a: #bebebe;
+    --cor-dark: #000;
+    --cor-dark-inverso: #fff;
+    --cor-preta: #000;
+    --cor-preta-a: #1e1e1e;
+    --cor-preta-b: #3b3b3b;
+    --cor-preta-transparente: #ffffffa2;
+    --cor-do-inpuSearchMob: #000;
+    --cor-lilas: #d000ff;
+
+    --cor-do-fundo-do-site: #d8d8d8;
+    --cor-do-header: #fff;
+    --cor-do-link-do-header: #000;
+    --cor-do-hover: #006bae;
+    --cor-do-hover-cinza: #d1d1d1;
+    --cor-do-submenu: #3a4a55;
+    --cor-do-placeholder: #999999;
+    --cor-da-secc-input: #006eff27;
+    --cor-do-brilho: #dedede;
+    --cor-mit: #cccbcb;
+    --cor-do-fundo-intro: #b5acd1;
+    --cor-de-texto-cinza: #292929;
+
+}
+:root[theme="escuro"] {
+    --cor-branca: #fff;
+    --cor-azul: #0092ed;
+    --cor-azul-claro: #0092ed3e;
+    --cor-cinza: #676767;
+    --cor-cinza-a: #bebebe;
+    --cor-preta: #000;
+    --cor-preta-transparente: #000000a2;
+    --cor-dark: #fff;
+    --cor-dark-inverso: #000;
+    --cor-lilas: #d000ff;
+
+    --cor-do-fundo-do-site: #242424;
+    --cor-do-header: #202020;
+    --cor-do-link-do-header: #ffffff;
+    --cor-do-hover: #006bae;
+    --cor-do-hover-cinza: #313131;
+    --cor-do-submenu: #3a4a55;
+    --cor-do-placeholder: #686868;
+    --cor-do-inpuSearchMob: #fff;
+    --cor-da-secc-input: #006eff27;
+    --cor-do-brilho: #7c7c7c;
+    --cor-mit: #282828;
+    --cor-do-fundo-intro: #222028;
+    --cor-de-texto-cinza: #acacac;
+
+}
+
+.AvisoDeJavascript {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 999999;
+    overflow: hidden;
+    background-color: #000000a8;
+    backdrop-filter: blur(10px);
+    justify-content: center;
+    align-items: center;
+}
+.AvisoDeJavascript .Avjs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+.AvisoDeJavascript .OAvisoDeJavascripst {
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 640px;
+    border-radius: 10px;
+    padding: 20px;
+}
+.AvisoDeJavascript .OAvisoDeJavascripst .Aviso {
+    width: 300px;
+    margin-top: -70px;
+}
+.AvisoDeJavascript .OAvisoDeJavascripst .Aviso .AvisoTitulo {
+    font-size: 2em;
+    color: var(--cor-preta);
+}
+.AvisoDeJavascript .OAvisoDeJavascripst .Aviso .AvisoTexto {
+    font-size: 1.3em;
+    color: #242424;
+}
+.AvisoDeJavascript .OAvisoDeJavascripst .ImagemDeAvisoDoJS img {
+    width: 100%;
+    max-width: 300px
+}
+
+.Header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+    user-select: none;
+    font-size: 1.2em;
+    transition: .5s;
+    z-index: 9999;
+    user-select: none;
+}
+.Header.AddCordoHeader {
+    background-color: var(--cor-preta-transparente);
+    backdrop-filter: blur(4px);
+}
+.LogoHeader img {
+    width: 100%;
+    max-width: 70px;
+    min-width: 35px;
+}
+.Nav ul {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    list-style: none;
+}
+.Nav ul li .lkh {
+    text-decoration: none;
+    color: var(--cor-do-link-do-header);
+    transition: .2s;
+    font-weight: 600;
+    position: relative;
+
+    &:hover {
+        color: var(--cor-do-hover);
+    }
+}
+.Nav ul li .linhabaixo {
+    &:hover::after {
+        width: 100%;
+    }
+}
+.Nav ul li .linhabaixo::after {
+    border-radius: 100px;
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: var(--cor-azul);
+    left: 0;
+    bottom: 0;
+    transition: .3s;
+}
+.Nav ul li a .LinkCeta {
+    position: absolute;
+    margin-left: 4px;
+    margin-top: 8px;
+    transition: .2s;
+    width: 11px;
+}
+.Nav ul li a:hover .LinkCeta {
+    transform: rotate(-180deg);
+}
+.Nav ul li .SubProdutos {
+    display: none;
+    width: 780px;
+    flex-wrap: wrap;
+    position: absolute;
+    padding: 3px;
+    animation: AnimacaoParaMenuDesk .5s ease;
+    margin-left: -200px;
+
+    &:hover {
+        display: flex;
+    }
+}
+.Nav ul li .SubProdutos .AntLista {
+    background-color: var(--cor-do-submenu);
+    padding: 10px;
+    padding-top: 20px;
+    border-radius: 10px;
+    box-shadow: -4px 4px 4px #00000056;
+    display: flex;
+    flex-wrap: wrap;
+}
+.Nav ul li .SubProdutos .AntLista::after {
+    position: absolute;
+    content: '';
+    background-color: var(--cor-do-submenu);
+    height: 10px;
+    width: 10px;
+    margin-top: -25px;
+    transform: rotate(45deg);
+    margin-left: 230px;
+}
+.Nav ul li .SubProdutos .Lista {
+    display: flex;
+    margin-bottom: 10px;
+}
+.Nav ul li .SubProdutos .Lista img {
+    border-radius: 3px;
+    width: 40px;
+}
+.Nav ul li .SubProdutos .Lista h3 {
+    color: var(--cor-branca);
+    font-weight: 300;
+    font-size: 1em;
+}
+.Nav ul li .SubProdutos .Lista p {
+    color: var(--cor-cinza-a);
+    font-size: .9em;
+}
+.Nav ul li .SubProdutos .Lista .OsSubProdutos {
+    font-size: .9em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    border-radius: 5px;
+    gap: 10px;
+    overflow: hidden;
+    z-index: 1;
+    text-decoration: none;
+
+    &:hover {
+        background-color: var(--cor-azul-claro);
+        color: var(--cor-dark);
+    }
+}
+.Nav ul .SubP:hover .SubProdutos,
+.Nav ul .SubS:hover .SubProdutos {
+    display: flex;
+}
+
+.SearchHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 250px;
+    display: flex;
+    margin: 0 10px 0 10px;
+    transition: .2s;
+}
+.SearchHeader input {
+    border: 1px solid var(--cor-dark);
+    border-radius: 50px;
+    transition: .2s;
+    background-color: transparent;
+    width: 100%;
+    max-width: 250px;
+    min-width: 50px;
+    height: 40px;
+    outline: 0;
+    padding: 5px 10px;
+    color: var(--cor-do-inpuSearchMob);
+    font-size: .8em;
+    overflow: hidden;
+
+    &::placeholder {
+        color: var(--cor-do-placeholder);
+    }
+
+    &:focus {
+        border: 0;
+        background-color: transparent;
+        box-shadow: 0 0 3px 3px var(--cor-azul-claro);
+    }
+}
+.SearchHeader button {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    height: 38px;
+    width: 49px;
+    justify-content: center;
+    border: 0;
+    outline: 0;
+    border-radius: 0 50px 50px 0;
+    color: var(--cor-dark);
+    padding: 5px;
+    margin-left: 190px;
+    margin-top: 0;
+    background-color: var(--cor-do-fundo-do-site);
+
+    &:hover {
+        cursor: pointer;
+        color: var(--cor-azul);
+    }
+}
+.SearchHeader button.BgHeader {
+    background-color: var(--cor-preta-transparente);
+}
+
+.HeaderBtn {
+    display: flex;
+    gap: 20px;
+}
+.HeaderBtn .TogleTheme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    cursor: pointer;
+
+    &:hover .btnAlterarCores {
+        color: var(--cor-azul);
+    }
+}
+.HeaderBtn .btnAlterarCores {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--cor-do-link-do-header);
+    transition: .2s;
+    width: 1.3em;
+    margin-top: -2px;
+}
+.HeaderBtn .SeInscrever {
+    border: 1px solid var(--cor-azul-claro);
+    color: var(--cor-dark);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    max-width: 140px;
+    background-color: var(--cor-azul-claro);
+
+    &:hover {
+        border: 1px solid var(--cor-azul);
+        color: var(--cor-branca);
+    }
+
+    &:hover::after {
+        height: 130px;
+    }
+}
+.HeaderBtn .SeInscrever::after {
+    position: absolute;
+    content: '';
+    width: 140px;
+    height: 0;
+    background-color: var(--cor-azul);
+    z-index: -1;
+    transform: rotate(45deg);
+    transition: .3s;
+    border-radius: 3px;
+}
+.HeaderBtn .Entrar {
+    border: 1px solid var(--cor-dark);
+    color: var(--cor-dark);
+    padding: 3px 20px;
+    position: relative;
+    overflow: hidden;
+
+    &:hover::after {
+        margin-left: 270px;
+    }
+}
+.HeaderBtn .Entrar::after {
+    position: absolute;
+    content: '';
+    width: 140px;
+    height: 10px;
+    margin-left: -270px;
+    background-color: var(--cor-do-brilho);
+    z-index: -1;
+    box-shadow: 0 0 5px 20px var(--cor-do-brilho);
+    transform: rotate(40deg);
+    transition: .5s ease-in-out;
+    border-radius: 3px;
+}
+.HeaderBtn .Entrar span {
+    margin-top: 5px;
+    width: 2.8em;
+}
+.HeaderBtn a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 3px;
+    gap: 4px;
+    transition: .2s;
+}
+.HeaderBtn .MenuLogo {
+    display: none;
+    margin-left: -20px;
+}
+.HeaderBtn .MenuLogo span .MenuLogoSvg {
+    color: var(--cor-do-link-do-header);
+    width: 2.3em;
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 4px 15px 0 10px;
+    padding: 5px;
+
+    &:hover {
+        background-color: var(--cor-cinza);
+        color: var(--cor-branca);
+    }
+}
+
+.MenuMobile {
+    right: 0;
+    width: 100% !important;
+    max-width: 420px;
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    padding: 75px 20px 0 20px;
+    background-color: var(--cor-do-header);
+    animation: AnimacaoParaMenuBobile .5s ease;
+    position: fixed;
+    z-index: 2;
+    user-select: none;
+}
+.MenuMobile .LinkisDoMobile {
+    margin: 10px;
+    font-size: 1.3em;
+    width: 100%;
+}
+.MenuMobile .LinkisDoMobile .SearchMobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    margin: 10px 0 10px 0;
+    transition: .2s;
+}
+.MenuMobile .LinkisDoMobile .SearchMobile input {
+    border: 1px solid var(--cor-dark);
+    border-radius: 50px;
+    transition: .2s;
+    background-color: transparent;
+    width: 100%;
+    min-width: 50px;
+    height: 50px;
+    outline: 0;
+    padding: 5px 17px;
+    color: var(--cor-do-inpuSearchMob);
+    font-size: .9em;
+    overflow: hidden;
+
+    &::placeholder {
+        color: var(--cor-do-placeholder);
+    }
+
+    &:focus {
+        border: 0;
+        background-color: transparent;
+        box-shadow: 0 0 3px 3px var(--cor-azul-claro);
+    }
+
+    &:focus button {
+        border-top: 1px solid transparent;
+        border-right: 1px solid transparent;
+        border-bottom: 1px solid transparent;
+    }
+}
+.MenuMobile .OsLinkisMobile {
+    width: 100%;
+    max-width: 400px;
+}
+.MenuMobile .OsLinkisMobile ul {
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 600px;
+    width: 350px;
+    padding: 0 5px 150px 0;
+
+    &:hover {
+        background-color: transparent;
+    }
+    &:active {
+        background-color: transparent;
+    }
+}
+.MenuMobile .OsLinkisMobile ul::-webkit-scrollbar {
+    background-color: var(--cor-cinza);
+    width: 3px;
+    border-radius: 100px;
+}
+.MenuMobile .OsLinkisMobile ul::-webkit-scrollbar-thumb {
+    background-color: var(--cor-azul);
+    width: 3px;
+    border-radius: 100px;
+}
+.MenuMobile .OsLinkisMobile ul,
+a,
+summary {
+    list-style: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.MenuMobile .OsLinkisMobile a,
+summary {
+    width: 100%;
+    display: block;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: .2s;
+    color: var(--cor-dark);
+    font-weight: 600;
+
+    &:hover {
+        background-color: var(--cor-azul-claro);
+        color: var(--cor-azul);
+
+
+    }
+}
+.MenuMobile .OsLinkisMobile .LinkCeta {
+    margin-left: 4px;
+    margin-top: 8px;
+    transition: .2s;
+    width: 13px;
+}
+.MenuMobile .OsLinkisMobile summary:hover .LinkCeta {
+    transform: rotate(-180deg);
+}
+.MenuMobile .OsLinkisMobile ul .SubMenuMob {
+    margin-left: 20px;
+    font-size: .9em;
+}
+.MenuMobile .OsLinkisMobile ul .SubMenuMob a {
+    color: var(--cor-azul);
+
+    &:hover {
+        color: var(--cor-dark);
+    }
+}
+.MenuMobile .LinkisDoMobile .BtnLoginMobile {
+    display: block;
+    color: var(--cor-branca);
+}
+.MenuMobile .OsLinkisMobile ul .BtnLogin {
+    margin-top: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.MenuMobile .OsLinkisMobile ul .BtnLogin a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    padding: 7px;
+    border-radius: 3px;
+    gap: 4px;
+    transition: .2s;
+}
+.MenuMobile .OsLinkisMobile ul .BtnLogin .SeInscrever {
+    border: 1px solid var(--cor-dark);
+    color: var(--cor-dark);
+    display: flex;
+    position: relative;
+    overflow: hidden;
+
+    &:hover {
+        border: 1px solid var(--cor-azul);
+        color: var(--cor-branca);
+    }
+
+    &:hover::after {
+        height: 600px;
+    }
+}
+.MenuMobile .OsLinkisMobile ul .BtnLogin .SeInscrever::after {
+    position: absolute;
+    content: '';
+    width: 600px;
+    height: 0;
+    background-color: var(--cor-azul);
+    z-index: -1;
+    transform: rotate(45deg);
+    transition: .5s ease-in-out;
+    border-radius: 3px;
+}
+.MenuMobile .OsLinkisMobile ul .BtnLogin .Entrar {
+    border: 1px solid var(--cor-dark);
+    color: var(--cor-dark);
+    padding: 3px 7px;
+    position: relative;
+    overflow: hidden;
+    background-color: transparent;
+
+    &:hover::after {
+        margin-left: 520px;
+    }
+}
+.MenuMobile .OsLinkisMobile ul .BtnLogin .Entrar::after {
+    position: absolute;
+    content: '';
+    width: 140px;
+    height: 10px;
+    margin-left: -520px;
+    background-color: var(--cor-do-brilho);
+    z-index: -1;
+    box-shadow: 0 0 5px 20px var(--cor-do-brilho);
+    transform: rotate(40deg);
+    transition: .5s ease-in-out;
+    border-radius: 3px;
+}
+.MenuMobile .OsLinkisMobile ul .BtnLogin .Entrar span {
+    margin-top: 5px;
+    width: 1em;
+}
+
+@keyframes AnimacaoParaMenuDesk {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+@keyframes AnimacaoParaMenuBobile {
+    0% {
+        opacity: 0;
+        margin-right: -100px;
+    }
+
+    100% {
+        opacity: 1;
+        margin-right: 0;
+    }
+}
+@keyframes appearAnimation {
+    0% {
+        opacity: 0;
+        margin-left: 30px;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1301px) {
+    .Header {
+        justify-content: space-between;
+    }
+    .Nav {
+        display: none;
+    }
+    .HeaderBtn .MenuLogo {
+        display: block;
+    }
+    .SearchHeader {
+        display: none;
+    }
+    .HeaderBtn .Entrar span {
+        margin-top: 5px;
+        width: 1.3em;
+    }
+}
+@media screen and (min-width: 1301px) {
+
+    .MenuMobile,
+    .PanoDoHeader {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 939px) {
+    .SeccaoDeIntro .Titulo {
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 1037px) {
+    .SeccaoDeIntro .IntroBtn {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .SeccaoDeIntro .IntroBtn a {
+        width: 100%;
+        justify-content: center;
+        padding: 10px;
+    }
+}
+@media screen and (max-width: 864px) {
+    .SeccaoDeIntroducao {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 100px 10px 10px 10px;
+
+    }
+    .SeccaoDeIntro {
+        width: 100%;
+    }
+    .SeccaoDeIntro .Titulo {
+        font-size: 2.3em;
+        width: 100%;
+    }
+    .SeccaoDeIntro .PequenaDescricao {
+        width: 100%;
+    }
+    .SeccaoDeIntro .IntroBtn {
+        justify-content: center;
+    }
+    .SeccaoDeIntro .IntroBtn a{
+        width: 268px;
+    }
+    .SeccaoDeIntroducao .ImagemDaIntroducao {
+        display: flex;
+        justify-content: center;
+    }
+    .SeccaoDeIntroducao .ImagemDaIntroducao img {
+        width: 100% !important;
+        min-width: 220px;
+    }
+}
+@media screen and (max-width: 660px) {
+    .SeccaoDeIntro .ContadorDeServicos{
+        justify-content: center !important;
+    }
+}
+@media screen and (max-width: 580px) {
+    .SeccaoDeIntro .ContadorDeServicos {
+        justify-content: center;
+        flex-wrap: nowrap;
+        margin-top: 20px;
+    }
+    .SeccaoDeIntro .ContadorDeServicos .numero {
+        text-align: center;
+        font-size: 1.5em;
+    }
+    .SeccaoDeIntro .ContadorDeServicos .descnum {
+        display: none;
+    }
+    .SeccaoDeIntro .ContadorDeServicos div {
+        width: 160px;
+        padding: 10px 0 0 0;
+        margin: 0;
+    }
+    .SeccaoDeIntro .ContadorDeServicos .ProjectosFeitos {
+        width: 120px;
+    }
+    .SeccaoDeIntro .ContadorDeServicos .ProjectosRequisitados {
+        width: 150px;
+    }
+    .SeccaoDeIntro .ContadorDeServicos .ProjectosFeitos::after,
+    .SeccaoDeIntro .ContadorDeServicos .ProjectosEmAndamento::after,
+    .SeccaoDeIntro .ContadorDeServicos .ProjectosRequisitados::after {
+        margin-top: 5px;
+        font-size: .5em;
+    }
+}
+@media screen and (max-width: 550px) {
+    .SeccaoDeIntro .MiniIntro .trabalhecnsc {
+        display: none;
+    }
+    .SeccaoDeIntro .MiniIntro {
+        width: 214px !important;
+    }
+    .AvisoDeJavascript .OAvisoDeJavascripst {
+        flex-wrap: wrap;
+        padding-top: 110px;
+    }
+}
+@media screen and (max-width: 485px) {
+    .BtnLogin {
+        display: none !important;
+    }
+    .MenuMobile .OsLinkisMobile ul {
+        width: 100%;
+    }
+    .MenuMobile .OsLinkisMobile ul .BtnLogin {
+        display: flex !important;
+    }
+}
+@media screen and (max-width: 439px) {
+    .SeccaoDeIntroducao{
+        transition: .3s;
+        padding: 120px 10px 10px 10px !important;
+        margin: 0;
+    }
+    .SeccaoDeIntro .Titulo {
+        font-size: 1.6em;
+    }
+
+    .SeccaoDeIntro .PequenaDescricao {
+        font-size: 1em;
+        line-height: 20px;
+        margin-bottom: 10px;
+    }
+
+    .SeccaoDeIntro .IntroBtn {
+        margin-bottom: 10px;
+    }
+
+    .SeccaoDeIntro .IntroBtn a {
+        font-size: 1em;
+        padding: 10px 15px;
+        transition: .3s;
+    }
+}
+@media screen and (max-width: 411px) {
+    .SeccaoDeIntro .ContadorDeServicos {
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (max-width: 353px) {
+    /* .MenuMobile .OsLinkisMobile ul {
+        justify-content: center;
+        padding-left: 20px;
+    } */
+    .SeccaoDeIntro .IntroBtn a {
+        padding: 10px !important;
+    }
+    .SeccaoDeIntro .IntroBtn .QtcMob {
+        display: block;
+        padding: 10px 15px;
+    }
+    .SeccaoDeIntroducao .ImagemDaIntroducao {
+        margin-top: -25px;
+    }
+}
+@media screen and (max-width: 330px) {
+    .SeccaoDeIntro .Titulo {
+        font-size: 1.3em !important;
+    }
+}
+@media screen and (max-width: 317px) {
+    .MenuMobile .OsLinkisMobile .LinkCeta {
+        margin-top: 3px;
+    }
+
+    .MenuMobile .LinkisDoMobile .SearchMobile input {
+        height: 40px;
+        padding: 5px 10px;
+    }
+
+    .MenuMobile .LinkisDoMobile .SearchMobile button {
+        height: 37px;
+        padding: 5px 10px;
+        width: 40px;
+        margin-left: 140px;
+    }
+}
+@media screen and (max-width: 269px) {
+    .SeccaoDeIntro .IntroBtn .Qtc {
+        display: none;
+    }
+    .SeccaoDeIntro .IntroBtn .QtcMob{
+        display: block !important;
+    }
+}
+@media screen and (max-width: 231px) {
+    .SeccaoDeIntro .MiniIntro {
+        display: none !important;
+    }
+}
+@media screen and (max-width: 203px) {
+    .MenuMobile .LinkisDoMobile .SearchMobile button {
+        height: 37px;
+        padding: 5px 10px;
+        width: 40px;
+        margin-left: 130px;
+    }
+}
+@media screen and (max-width: 170px) {
+    .SeccaoDeIntro .IntroBtn a {
+        font-size: .7em !important;
+    }
+}
+@media screen and (max-width: 130px) {
+    body {
+        display: none;
+    }
+}

@@ -1,0 +1,229 @@
+@import url(index.css);
+
+:root[theme="claro"] {
+    --cor-branca: #fff;
+    --cor-azul: #0092ed;
+    --cor-azul-claro: #0092ed3e;
+    --cor-cinza: #676767;
+    --cor-cinza-a: #bebebe;
+    --cor-dark: #000;
+    --cor-dark-inverso: #fff;
+    --cor-preta: #000;
+    --cor-preta-a: #1e1e1e;
+    --cor-preta-b: #3b3b3b;
+    --cor-preta-transparente: #ffffffa2;
+    --cor-do-inpuSearchMob: #000;
+    --cor-lilas: #d000ff;
+    --cor-gradiente: linear-gradient(to right, var(--cor-lilas), var(--cor-azul));
+
+    --cor-do-fundo-do-site: #d8d8d8;
+    --cor-do-header: #fff;
+    --cor-do-link-do-header: #000;
+    --cor-do-hover: #006bae;
+    --cor-do-hover-cinza: #d1d1d1;
+    --cor-do-submenu: #3a4a55;
+    --cor-do-placeholder: #999999;
+    --cor-da-secc-input: #006eff27;
+    --cor-do-brilho: #dedede;
+    --cor-mit: #cccbcb;
+    --cor-do-fundo-intro: #b5acd1;
+    --cor-de-texto-cinza: #292929;
+
+}
+:root[theme="escuro"] {
+    --cor-branca: #fff;
+    --cor-azul: #0092ed;
+    --cor-azul-claro: #0092ed3e;
+    --cor-cinza: #676767;
+    --cor-cinza-a: #bebebe;
+    --cor-preta: #000;
+    --cor-preta-transparente: #000000a2;
+    --cor-dark: #fff;
+    --cor-dark-inverso: #000;
+    --cor-lilas: #d000ff;
+
+    --cor-do-fundo-do-site: #242424;
+    --cor-do-header: #202020;
+    --cor-do-link-do-header: #ffffff;
+    --cor-do-hover: #006bae;
+    --cor-do-hover-cinza: #313131;
+    --cor-do-submenu: #3a4a55;
+    --cor-do-placeholder: #686868;
+    --cor-do-inpuSearchMob: #fff;
+    --cor-da-secc-input: #006eff27;
+    --cor-do-brilho: #7c7c7c;
+    --cor-mit: #282828;
+    --cor-do-fundo-intro: #222028;
+    --cor-de-texto-cinza: #acacac;
+
+}
+
+.SeccaoDeIntroducao {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 120px 50px 50px 50px;
+    border-radius: 0 0 20px 20px;
+    user-select: none;
+}
+.DescricaoDaIntro {
+    width: 100%;
+    max-width: 700px;
+}
+.SeccaoDeIntro {
+    display: flex;
+    flex-direction: column;
+    color: var(--cor-dark);
+}
+.SeccaoDeIntro .MiniIntro {
+    background-color: var(--cor-mit);
+    margin-bottom: 20px;
+    width: 371px;
+    padding: 5px 8px;
+    color: var(--cor-dark);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: .7em;
+    border-radius: 100px;
+    transition: .3s;
+}
+.SeccaoDeIntro .Titulo {
+    margin: 20px 0;
+    font-weight: 450;
+    font-size: 2.3em;
+    width: 100%;
+    transition: .3s;
+}
+.SeccaoDeIntro .PequenaDescricao {
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: var(--cor-de-texto-cinza);
+    width: 100%;
+    font-size: 1.2em;
+    transition: .3s;
+    line-height: 30px;
+}
+.SeccaoDeIntro .IntroBtn {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.SeccaoDeIntro .IntroBtn a {
+    text-decoration: none;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 5px;
+    font-size: 1em;
+    padding: 20px 15px;
+    box-shadow: 3px 4px 4px 0px #0000003e;
+    font-weight: 450;
+    transition: 1s;
+
+    &:hover {
+        transition: 1s;
+        color: var(--cor-dark);
+        background: linear-gradient(to right, var(--cor-lilas), var(--cor-azul), var(--cor-lilas));
+    }
+}
+
+.SeccaoDeIntro .IntroBtn .Qtc {
+    color: var(--cor-branca);
+    background-color: var(--cor-azul);
+    padding-right: 35px;
+}
+.SeccaoDeIntro .IntroBtn .QtcMob {
+    display: none;
+}
+.SeccaoDeIntro .IntroBtn .Qe {
+    background-color: var(--cor-mit);
+    color: var(--cor-dark);
+    border-radius: 100px;
+}
+.SeccaoDeIntro .ContadorDeServicos {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 40px;
+    gap: 10px;
+}
+.SeccaoDeIntro .ContadorDeServicos div {
+    width: 100%;
+    max-width: 180px;
+    padding: 10px;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    border: 1px solid transparent;
+
+    &:hover {
+        border: 1px solid var(--cor-de-texto-cinza);
+        transform: scale(1.1);
+    }
+}
+.SeccaoDeIntro .ContadorDeServicos .ProjectosFeitos::after {
+    content: 'Projectos Feitos';
+    position: absolute;
+    color: var(--cor-de-texto-cinza);
+    height: 20px;
+    font-weight: bold;
+    border: 1px solid var(--cor-de-texto-cinza);
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    font-size: .6em;
+    border-radius: 100px;
+    margin: 10px;
+}
+.SeccaoDeIntro .ContadorDeServicos .ProjectosEmAndamento::after {
+    content: 'Projectos em Andamento';
+    position: absolute;
+    color: var(--cor-de-texto-cinza);
+    height: 20px;
+    font-weight: bold;
+    border: 1px solid var(--cor-de-texto-cinza);
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    font-size: .6em;
+    border-radius: 100px;
+    margin: 10px;
+}
+.SeccaoDeIntro .ContadorDeServicos .ProjectosRequisitados::after {
+    content: 'Projectos Requisitados';
+    position: absolute;
+    color: var(--cor-de-texto-cinza);
+    height: 20px;
+    font-weight: bold;
+    border: 1px solid var(--cor-de-texto-cinza);
+    top: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 5px;
+    font-size: .6em;
+    border-radius: 100px;
+    margin: 10px;
+}
+.SeccaoDeIntro .ContadorDeServicos .numero {
+    font-size: 2em;
+    font-weight: 900;
+    margin-top: 20px;
+}
+.SeccaoDeIntro .ContadorDeServicos .descnum {
+    font-size: .8em;
+    color: var(--cor-de-texto-cinza);
+    line-height: 20px;
+}
+.SeccaoDeIntroducao .ImagemDaIntroducao img {
+    width: 500px;
+}
