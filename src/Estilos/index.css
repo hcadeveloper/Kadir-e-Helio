@@ -131,6 +131,10 @@ html {
     width: 100%;
     max-width: 40px;
     min-width: 35px;
+
+    &:hover {
+        opacity: 80%;
+    }
 }
 .Nav ul {
     display: flex;
