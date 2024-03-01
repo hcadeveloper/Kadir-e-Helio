@@ -31,6 +31,8 @@ body::-webkit-scrollbar-thumb{
     overflow: hidden;
     cursor: pointer;
     z-index: 1;
+    cursor: url(/src/Imagens/fechar.png), pointer;
+    
 }
 .TextoGradiente {
     background: linear-gradient(to right, var(--cor-lilas), var(--cor-azul));
