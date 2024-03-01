@@ -621,7 +621,54 @@ summary {
     margin-top: 5px;
     width: 1em;
 }
+.SeccaoDeIrAoTop a{
+    background-color: var(--cor-dark-inverso);
+    width: 35px;
+    height: 35px;
+    color: var(--cor-dark);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    border: 1px solid var(--cor-dark);
+    cursor: pointer;
+    right: 0;
+    position: absolute;
+    margin: 0 20px 0 0;
 
+    &:hover::after{
+        display: flex;
+    }
+    &:hover::before{
+        display: flex;
+
+    }
+}
+.SeccaoDeIrAoTop a::after {
+    content: "Ir ao topo";
+    position: absolute;
+    width: 50px;
+    font-size: .6em;
+    margin-top: -70px;
+    text-align: center;
+    padding: 4px;
+    background-color: var(--cor-dark-inverso);
+    border-radius: 4px;
+    display: none;
+}
+.SeccaoDeIrAoTop a::before {
+    content: "";
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    font-size: .6em;
+    margin-top: -54px;
+    text-align: center;
+    padding: 4px;
+    transform: rotate(45deg);
+    background-color: var(--cor-dark-inverso);
+    display: none;
+}
 @keyframes AnimacaoParaMenuDesk {
     0% {
         opacity: 0;
