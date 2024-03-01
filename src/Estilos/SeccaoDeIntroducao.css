@@ -124,9 +124,9 @@
     transition: 1s;
 
     &:hover {
-        transition: 1s;
-        color: var(--cor-dark);
-        background: linear-gradient(to right, var(--cor-lilas), var(--cor-azul), var(--cor-lilas));
+        transition: .3s;
+        color: var(--cor-branca);
+        background: linear-gradient(to right, var(--cor-lilas), var(--cor-azul));
     }
 }
 
