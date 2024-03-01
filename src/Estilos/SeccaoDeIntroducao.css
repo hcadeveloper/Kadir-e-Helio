@@ -8,6 +8,20 @@
     border-radius: 0 0 20px 20px;
     user-select: none;
 }
+.SeccaoDeIntroducao::after {
+    content: '';
+    width: 400px;
+    height: 400px;
+    max-width: 400px;
+    max-height: 400px;
+    background-color: transparent;
+    border: 70px solid var(--cor-do-circulo);
+    border-radius: 100%;
+    position: fixed;
+    z-index: -999999999999;
+    transform: translateX(700px);
+    top: -300px;
+}
 .DescricaoDaIntro {
     width: 100%;
     max-width: 700px;
