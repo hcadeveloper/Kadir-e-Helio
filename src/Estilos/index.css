@@ -620,7 +620,7 @@ summary {
 }
 .SeccaoIATP.SeccaoDeIrAoTop a{
     background-color: var(--cor-dark-inverso);
-    width: 35px;
+    width: 40px;
     height: 35px;
     color: var(--cor-dark);
     display: flex;
