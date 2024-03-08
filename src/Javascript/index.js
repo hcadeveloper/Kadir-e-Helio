@@ -2,9 +2,12 @@
 window.addEventListener("scroll", function () {
     let HeaderBtnSearch = document.querySelector(".HeaderBtnSearch");
     let Header = document.querySelector(".Header");
+    let SeccaoIATP = document.querySelector(".SeccaoIATP");
 
     HeaderBtnSearch.classList.toggle('BgHeader', window.scrollY > 50)
     Header.classList.toggle('AddCordoHeader', window.scrollY > 50)
+    Header.classList.toggle('AddCordoHeader', window.scrollY > 50)
+    SeccaoIATP.classList.toggle('SeccaoDeIrAoTop', window.scrollY > 300)
 })
 
 // JS PARA TEMA DARK
