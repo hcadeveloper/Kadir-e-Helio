@@ -620,7 +620,7 @@ summary {
 }
 .SeccaoIATP.SeccaoDeIrAoTop a{
     background-color: var(--cor-dark-inverso);
-    width: 40px;
+    width: 35px;
     height: 35px;
     color: var(--cor-dark);
     display: flex;
@@ -648,7 +648,7 @@ summary {
 .SeccaoDeIrAoTop a::after {
     content: "Ir ao topo";
     position: absolute;
-    width: 43px;
+    width: 47px;
     font-size: .6em;
     margin-top: -70px;
     text-align: center;
