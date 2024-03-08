@@ -1,5 +1,65 @@
 @import url(index.css);
 
+:root[theme="claro"] {
+    --cor-branca: #fff;
+    --cor-azul: #0092ed;
+    --cor-azul-claro: #0092ed3e;
+    --cor-cinza: #676767;
+    --cor-cinza-a: #bebebe;
+    --cor-dark: #000;
+    --cor-dark-inverso: #fff;
+    --cor-preta: #000;
+    --cor-preta-a: #1e1e1e;
+    --cor-preta-b: #3b3b3b;
+    --cor-preta-transparente: #ffffffa2;
+    --cor-do-inpuSearchMob: #000;
+    --cor-lilas: #d000ff;
+    --cor-gradiente: linear-gradient(to right, var(--cor-lilas), var(--cor-azul));
+    --cor-do-circulo: #b8b8b8;
+    
+    --cor-do-fundo-do-site: #d8d8d8;
+    --cor-do-header: #fff;
+    --cor-do-link-do-header: #000;
+    --cor-do-hover: #006bae;
+    --cor-do-hover-cinza: #d1d1d1;
+    --cor-do-submenu: #3a4a55;
+    --cor-do-placeholder: #999999;
+    --cor-da-secc-input: #006eff27;
+    --cor-do-brilho: #dedede;
+    --cor-mit: #cccbcb;
+    --cor-do-fundo-intro: #b5acd1;
+    --cor-de-texto-cinza: #292929;
+
+}
+:root[theme="escuro"] {
+    --cor-branca: #fff;
+    --cor-azul: #0092ed;
+    --cor-azul-claro: #0092ed3e;
+    --cor-cinza: #676767;
+    --cor-cinza-a: #bebebe;
+    --cor-preta: #000;
+    --cor-preta-transparente: #000000a2;
+    --cor-dark: #fff;
+    --cor-dark-inverso: #000;
+    --cor-lilas: #d000ff;
+    --cor-do-circulo: #2c2c2c;
+
+    --cor-do-fundo-do-site: #242424;
+    --cor-do-header: #202020;
+    --cor-do-link-do-header: #ffffff;
+    --cor-do-hover: #006bae;
+    --cor-do-hover-cinza: #313131;
+    --cor-do-submenu: #3a4a55;
+    --cor-do-placeholder: #686868;
+    --cor-do-inpuSearchMob: #fff;
+    --cor-da-secc-input: #006eff27;
+    --cor-do-brilho: #7c7c7c;
+    --cor-mit: #282828;
+    --cor-do-fundo-intro: #222028;
+    --cor-de-texto-cinza: #acacac;
+
+}
+
 .SeccaoDeIntroducao {
     display: flex;
     justify-content: space-evenly;
@@ -8,23 +68,10 @@
     border-radius: 0 0 20px 20px;
     user-select: none;
 }
-.SeccaoDeIntroducao::after {
-    content: '';
-    width: 400px;
-    height: 400px;
-    max-width: 400px;
-    max-height: 400px;
-    background-color: transparent;
-    border: 70px solid var(--cor-do-circulo);
-    border-radius: 100%;
-    position: fixed;
-    z-index: -999999999999;
-    transform: translateX(700px);
-    top: -300px;
-}
 .DescricaoDaIntro {
     width: 100%;
     max-width: 700px;
+    color: #00000000;
 }
 .SeccaoDeIntro {
     display: flex;
@@ -80,7 +127,6 @@
         background: linear-gradient(to right, var(--cor-lilas), var(--cor-azul));
     }
 }
-
 .SeccaoDeIntro .IntroBtn .Qtc {
     color: var(--cor-branca);
     background-color: var(--cor-azul);
