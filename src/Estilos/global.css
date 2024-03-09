@@ -132,11 +132,10 @@ body::-webkit-scrollbar-thumb{
     animation-delay: .6s;
 }
 
-
 .AsIntrosDasSeccaoes {
     width: 100%;
     color: var(--cor-dark);
-    padding: 20px 40px;
+    padding: 100px 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -161,7 +160,11 @@ body::-webkit-scrollbar-thumb{
 }
 .AsIntrosDasSeccaoes .OsCardsDeDestaques {
     display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
+    width: 100%;
+    max-width: 60rem;
 }
 .AsIntrosDasSeccaoes .OsCardsDeDestaques .DestaqueCard {
     width: 100%;
@@ -170,6 +173,7 @@ body::-webkit-scrollbar-thumb{
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     text-align: center;
     font-size: .9em;
     border-radius: 5px;
@@ -180,27 +184,6 @@ body::-webkit-scrollbar-thumb{
     background-color: var(--cor-lilas);
     color: var(--cor-branca);
 }
-/* .AsIntrosDasSeccaoes .OsCardsDeDestaques .DestaqueCard::after{
-    position: absolute;
-    content: '';
-    background-color: var(--cor-lilas-transparente);
-    width: 20px;
-    height: 20px;
-    z-index: -1;
-    border-radius: 100px;
-    top: 0;
-    left: 0;
-    box-shadow: 0 0 10px 10px var(--cor-lilas-transparente);
+.AsIntrosDasSeccaoes .OsCardsDeDestaques .DestaqueCard span{
+    
 }
-.AsIntrosDasSeccaoes .OsCardsDeDestaques .DestaqueCard::before{
-    position: absolute;
-    content: '';
-    background-color: var(--cor-azul-transparente);
-    width: 60px;
-    height: 20px;
-    z-index: -1;
-    border-radius: 100px;
-    margin-top: 20px;
-    margin-left: 100px;
-    box-shadow: 0 0 10px 10px var(--cor-azul-transparente);
-} */
