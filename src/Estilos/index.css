@@ -668,8 +668,13 @@ summary {
     text-align: center;
     padding: 4px;
     transform: rotate(45deg);
-    background-color: var(--cor-dark-inverso);
+    color: var(--cor-dark-inverso);
+    background-color: var(--cor-dark);
     display: none;
+}
+
+.EntradaDeAnimacaoDireita{
+    animation: EntraDoLadoDireito .3s ease;
 }
 
 @keyframes AnimacaoParaMenuDesk {
@@ -704,6 +709,7 @@ summary {
         opacity: 1;
     }
 }
+
 
 @media screen and (max-width: 1301px) {
     .Header {
