@@ -168,7 +168,7 @@ body::-webkit-scrollbar-thumb{
 }
 .AsIntrosDasSeccaoes .OsCardsDeDestaques .DestaqueCard {
     width: 100%;
-    max-width: 350px;
+    max-width: 340px;
     padding: 20px;
     display: flex;
     justify-content: center;
