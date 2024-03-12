@@ -83,3 +83,12 @@ document.addEventListener('DOMContentLoaded', function () {
     AvisoDeJavascript.style.display = 'flex';
     AvisoDeJavascript.style.display = 'none';
 });
+
+// JS PARA TROCA DE ABAS
+let docTitle = document.title;
+window.addEventListener("blur", () =>{
+    document.title = "Ei! Volta Para Mim 😥";
+})
+window.addEventListener("focus", () =>{
+    document.title = docTitle;
+})
