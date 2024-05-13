@@ -325,14 +325,16 @@ html {
     width: 1.3em;
     margin-top: -2px;
 }
-.HeaderBtn .SeInscrever {
-    border: 1px solid var(--cor-azul-claro);
+.HeaderBtn .BtnLogin a{
     color: var(--cor-dark);
     display: flex;
     position: relative;
     overflow: hidden;
-    width: 100%;
-    max-width: 140px;
+    font-size: 1em;
+    padding: 8px 10px;
+}
+.HeaderBtn .SeInscrever {
+    border: 1px solid var(--cor-azul-claro);
     background-color: var(--cor-azul-claro);
 
     &:hover {
@@ -358,9 +360,6 @@ html {
 .HeaderBtn .Entrar {
     border: 1px solid var(--cor-dark);
     color: var(--cor-dark);
-    padding: 3px 20px;
-    position: relative;
-    overflow: hidden;
 
     &:hover::after {
         margin-left: 270px;
@@ -727,6 +726,9 @@ summary {
     .PanoDoHeader {
         display: none !important;
     }
+    .HeaderBtn .SeInscrever {
+        width: 139px;
+    }
 }
 @media screen and (max-width: 939px) {
     .SeccaoDeIntro .Titulo {
@@ -851,6 +853,10 @@ summary {
     }
     .MenuMobile .OsLinkisMobile ul .BtnLogin {
         display: flex !important;
+    }
+    .MenuMobile .OsLinkisMobile ul .BtnLogin .SeInscrever {
+        border: 1px solid var(--cor-azul-claro) !important;
+        background-color: var(--cor-azul-claro);
     }
 }
 @media screen and (max-width: 439px) {
