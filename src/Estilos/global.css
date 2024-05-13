@@ -58,9 +58,7 @@
     --cor-mit: #282828;
     --cor-do-fundo-intro: #222028;
     --cor-de-texto-cinza: #acacac;
-
 }
-
 * {
     padding: 0;
     margin: 0;
@@ -131,21 +129,16 @@ body::-webkit-scrollbar-thumb{
 .Lme6 {
     animation-delay: .6s;
 }
-
 .AsIntrosDasSeccaoes {
     width: 100%;
     color: var(--cor-dark);
-    padding: 100px 40px;
+    padding: 50px 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: 1em;
-    transition: .3s;
     background-color: var(--cor-dark-inverso);
-}
-.AsIntrosDasSeccaoes .IntroDaSeccao h1{
-    transition:none !important;
 }
 .AsIntrosDasSeccaoes .ParagrafoDaIntro{
     margin: 0 auto;
@@ -156,7 +149,8 @@ body::-webkit-scrollbar-thumb{
     max-width: 700px;
     font-weight: 400;
     color: var(--cor-cinza);
-    transition: .3s;
+    font-size: 1.1em;
+    line-height: 25px;
 }
 .AsIntrosDasSeccaoes .OsCardsDeDestaques {
     display: flex;
@@ -164,26 +158,52 @@ body::-webkit-scrollbar-thumb{
     flex-wrap: wrap;
     gap: 10px;
     width: 100%;
-    max-width: 100rem;
+    margin-top: 15px;
+    max-width: 80rem;
+    z-index: 0;
 }
 .AsIntrosDasSeccaoes .OsCardsDeDestaques .DestaqueCard {
     width: 100%;
-    max-width: 340px;
+    max-width: 250px;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     text-align: center;
-    font-size: 1.1em;
-    border-radius: 5px;
+    border-radius: 15px;
     margin: 3px;
     position: relative;
     z-index: 1;
     overflow: hidden;
-    background-color: var(--cor-lilas);
+    background-color: var(--cor-azul);
     color: var(--cor-branca);
+    border-top: 1px solid var(--cor-dark-inverso);
+    border-left: 1px solid var(--cor-dark-inverso);
+
+    &:hover {
+        transform: rotate(10deg);
+        z-index: 2;
+        box-shadow: 10px 10px 5px #0000009a;
+        transition: .3s ease;
+    }
 }
-.AsIntrosDasSeccaoes .OsCardsDeDestaques .DestaqueCard span{
-    margin-bottom: 20px;
+.AsIntrosDasSeccaoes .OsCardsDeDestaques .DestaqueCard::after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--cor-lilas);
+    top: 0;
+    right: 0;
+    border-radius: 0 15px;
+}
+.AsIntrosDasSeccaoes .OsCardsDeDestaques .DestaqueCard span svg{
+    width: 60px;
+    height: 60px;
+    padding-bottom: 15px;
+}
+.AsIntrosDasSeccaoes .OsCardsDeDestaques .DestaqueCard p{
+    font-size: 1em;
+    opacity: 80%;
 }
