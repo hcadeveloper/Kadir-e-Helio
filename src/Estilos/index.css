@@ -1003,6 +1003,9 @@ summary {
     font-size: 2em;
     font-weight: bold;
 }
+.SeccaoDePrecosOsPrecos .OsPrecos .Precos .ValorPrecos .PorServico {
+    margin-top: 15px;
+}
 .SeccaoDePrecosOsPrecos .OsPrecos .Precos .ValorPrecos .PorServico, .DescricaoPrecos {
     opacity: 70%;
 }
