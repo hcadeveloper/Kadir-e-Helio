@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url(SeccaoDeIntroducao.css);
-
 :root[theme="claro"] {
-    --cor-branca: #fff;
-    --cor-azul: #0092ed;
-    --cor-azul-claro: #0092ed3e;
     --cor-cinza: #676767;
     --cor-cinza-a: #bebebe;
     --cor-dark: #000;
@@ -15,8 +11,8 @@
     --cor-preta-transparente: #ffffffa2;
     --cor-do-inpuSearchMob: #000;
     --cor-lilas: #d000ff;
-
     --cor-do-fundo-do-site: #d8d8d8;
+    --cor-do-fundo-do-preco: #86868676;
     --cor-do-header: #fff;
     --cor-do-link-do-header: #000;
     --cor-do-hover: #006bae;
@@ -28,12 +24,18 @@
     --cor-mit: #cccbcb;
     --cor-do-fundo-intro: #b5acd1;
     --cor-de-texto-cinza: #292929;
-
+    --cor-branca: #fff;
+    --cor-branca-b: #c7c7c7;
+    --cor-azul: #0092ed;
+    --cor-azul-escuro: #12364c;
+    --cor-azul-claro: #0092ed3e;
 }
 :root[theme="escuro"] {
     --cor-branca: #fff;
     --cor-azul: #0092ed;
+    --cor-azul-escuro: #12364c;
     --cor-azul-claro: #0092ed3e;
+    --cor-azul-transparente: #0092ed30;
     --cor-cinza: #676767;
     --cor-cinza-a: #bebebe;
     --cor-preta: #000;
@@ -41,7 +43,8 @@
     --cor-dark: #fff;
     --cor-dark-inverso: #000;
     --cor-lilas: #d000ff;
-
+    --cor-lilas-transparente: #d000ff38;
+    --cor-do-fundo-do-preco: #ffffff49;
     --cor-do-fundo-do-site: #242424;
     --cor-do-header: #202020;
     --cor-do-link-do-header: #ffffff;
@@ -55,11 +58,59 @@
     --cor-mit: #282828;
     --cor-do-fundo-intro: #222028;
     --cor-de-texto-cinza: #acacac;
-
+}
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 html {
     scroll-behavior: smooth;
-  }
+}
+body {
+    background-color: var(--cor-do-fundo-do-site);
+    font-family: "Poppins", sans-serif;
+    transition: .3s;
+}
+body::-webkit-scrollbar{
+    background-color: var(--cor-do-fundo-do-site);
+    width: 8px;
+    border-radius: 100px;
+}
+body::-webkit-scrollbar-thumb{
+    background-color: var(--cor-azul);
+    width: 8px;
+    border-radius: 100px;
+}
+.TextoGradiente {
+    background: linear-gradient(to right, var(--cor-lilas), var(--cor-azul));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    transition: .3s ease;
+}
+.BtnLogin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+.LinksMenuEntrando {
+    opacity: 0;
+    animation: appearAnimation 1s ease forwards;
+}
+.PanoDoHeader {
+    width: 100%;
+    height: 100vh;
+    background-color: #0000005f;
+    backdrop-filter: blur(2px);
+    position: fixed;
+    display: none;
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    cursor: url(/src/Imagens/fechar.png), pointer;
+}
 .AvisoDeJavascript {
     width: 100%;
     height: 100vh;
@@ -669,13 +720,376 @@ summary {
 .EntradaDeAnimacaoDireita{
     animation: EntraDoLadoDireito .3s ease;
 }
+.SeccaoDeIntroducao {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 60px 50px 50px 50px;
+    border-radius: 0 0 20px 20px;
+    user-select: none;
+}
+.DescricaoDaIntro {
+    width: 100%;
+    max-width: 700px;
+    color: #00000000;
+}
+.SeccaoDeIntro {
+    display: flex;
+    flex-direction: column;
+    color: var(--cor-dark);
+}
+.SeccaoDeIntro .MiniIntro {
+    background-color: var(--cor-mit);
+    width: 371px;
+    padding: 5px 8px;
+    color: var(--cor-dark);
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: .7em;
+    border-radius: 100px;
+}
+.SeccaoDeIntro .Titulo {
+    margin: 20px 0;
+    font-weight: 450;
+    font-size: 2.3em;
+    width: 100%;
+}
+.SeccaoDeIntro .PequenaDescricao {
+    font-weight: 300;
+    margin-bottom: 40px;
+    color: var(--cor-de-texto-cinza);
+    width: 100%;
+    font-size: 1.4em;
+    line-height: 35px;
+}
+.SeccaoDeIntroducao .ImagemDaIntroducao img {
+    width: 100% !important;
+    max-width: 600px;
+}
+.SeccaoDeIntro .IntroBtn {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: 20px;
+}
+.SeccaoDeIntro .IntroBtn a {
+    text-decoration: none;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 5px;
+    font-size: 1em;
+    padding: 20px 15px;
+    box-shadow: 3px 4px 4px 0px #0000003e;
+    font-weight: 450;
+
+    &:hover {
+        color: var(--cor-branca);
+        background: linear-gradient(to right, var(--cor-lilas), var(--cor-azul));
+    }
+
+}
+.SeccaoDeIntro .IntroBtn .Qtc {
+    color: var(--cor-branca);
+    background-color: var(--cor-azul);
+    padding-right: 35px;
+}
+.SeccaoDeIntro .IntroBtn .QtcMob {
+    display: none;
+}
+.SeccaoDeIntro .IntroBtn .Qe {
+    background-color: var(--cor-mit);
+    color: var(--cor-dark);
+    border-radius: 100px;
+}
+
+.Lme1 {
+    animation-delay: .1s;
+}
+.Lme2 {
+    animation-delay: .2s;
+}
+.Lme3 {
+    animation-delay: .3s;
+}
+.Lme4 {
+    animation-delay: .4s;
+}
+.Lme5 {
+    animation-delay: .5s;
+}
+.Lme6 {
+    animation-delay: .6s;
+}
+.AsIntrosDasSeccaoes {
+    width: 100%;
+    color: var(--cor-dark);
+    padding: 70px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1em;
+    background-color: var(--cor-dark-inverso);
+}
+.AsIntrosDasSeccaoes .IntroDaSeccao {
+    text-align: center;
+    font-size: 2em;
+}
+.AsIntrosDasSeccaoes .ParagrafoDaIntro{
+    margin: 0 auto;
+    text-align: center;
+    margin: 20px 0;
+    line-height: 22px;
+    width: 100%;
+    max-width: 700px;
+    font-weight: 300;
+    color: var(--cor-cinza);
+    font-size: 1.1em;
+    line-height: 30px;
+}
+.AsIntrosDasSeccaoes .OsCardsDeDestaques {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    margin-top: 15px;
+    max-width: 80rem;
+    z-index: 0;
+    position: relative;
+}
+.AsIntrosDasSeccaoes .OsCardsDeDestaques::after{
+    background: linear-gradient(45deg, var(--cor-azul), var(--cor-lilas));
+    position: absolute;
+    content: '';
+    width: 60%;
+    height: 80%;
+    border-radius: 10px;
+}
+.AsIntrosDasSeccaoes .OsCardsDeDestaques .DestaqueCard {
+    width: 100%;
+    max-width: 300px;
+    height: 200px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 15px;
+    margin: 3px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    background-color: var(--cor-azul-escuro);
+    color: var(--cor-branca);
+    border: 1px solid transparent;
+    font-weight: 300;
+    font-size: .9em;
+
+    &:hover {
+        transform: rotate(10deg) scale(110%);
+        z-index: 2;
+        box-shadow: 10px 10px 5px #0000009a;
+        transition: .3s ease;
+        border: 1px solid var(--cor-dark-inverso);
+    }
+}
+.AsIntrosDasSeccaoes .OsCardsDeDestaques .DestaqueCard span svg{
+    width: 60px;
+    height: 60px;
+    padding-bottom: 15px;
+}
+.AsIntrosDasSeccaoes .OsCardsDeDestaques .DestaqueCard p{
+    font-size: 1em;
+    color: var(--cor-branca-b);
+    opacity: 80%;
+}
+.VamosComecar {
+    margin: 30px 0;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.VamosComecar a {
+    padding: 5px;
+    padding-left: 15px;
+    color: var(--cor-branca);
+    text-transform: uppercase;
+    border-radius: 100px;
+    transition: .3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--cor-azul-escuro);
+
+    &:active{
+        background-color: var(--cor-cinza-a);
+    }
+    &:hover svg {
+        transform: translateX(5px);
+    }
+}
+.VamosComecar a svg {
+    width: 30px;
+    height: 30px;
+    transition: .3s ease;
+}
+
+.SeccaoDePrecos {
+    width: 100%;
+    color: var(--cor-dark);
+    padding: 70px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 1em;
+    background-color: var(--cor-do-fundo-do-site);
+}
+.SeccaoDePrecosIntro .TituloIntro {
+    text-align: center;
+    font-size: 2em;
+}
+.SeccaoDePrecos .DescricaoDaIntro {
+    margin: 0 auto;
+    text-align: center;
+    margin: 20px 0 30px 0;
+    line-height: 22px;
+    width: 100%;
+    max-width: 700px;
+    font-weight: 300;
+    color: var(--cor-dark);
+    font-size: 1.1em;
+    line-height: 30px;
+    opacity: 90%;
+}
+
+.SeccaoDePrecosOsPrecos {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.SeccaoDePrecosOsPrecos .OsPrecos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+}
+.SeccaoDePrecosOsPrecos .OsPrecos .Precos {
+    padding: 20px;
+    background-color: var(--cor-do-fundo-do-preco);
+}
+.SeccaoDePrecosOsPrecos .OsPrecos .Precos .TituloPrecos{
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.SeccaoDePrecosOsPrecos .OsPrecos .Precos .ValorPrecos{
+    display: flex;
+}
+.SeccaoDePrecosOsPrecos .OsPrecos .Precos .ValorPrecos .Mt {
+    font-size: 2em;
+    font-weight: bold;
+}
+.SeccaoDePrecosOsPrecos .OsPrecos .Precos .ValorPrecos .PorServico, .DescricaoPrecos {
+    opacity: 70%;
+}
+.SeccaoDePrecosOsPrecos .OsPrecos .Precos .DestaquePrecos {
+    margin: 10px 0 30px;
+}
+.SeccaoDePrecosOsPrecos .OsPrecos .Precos .DestaquePrecos p{
+    display: flex;
+    align-items: center;
+    font-size: .9em;
+    margin: 20px 0 10px 0;
+    font-weight: 500;
+}
+.SeccaoDePrecosOsPrecos .OsPrecos .Precos .DestaquePrecos p svg {
+    width: 23px;
+    height: 23px;
+    margin-right: 10px;
+}
+.SeccaoDePrecosOsPrecos .OsPrecos .Precos .BtnPrecos {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.SeccaoDePrecosOsPrecos .OsPrecos .Precos .BtnPrecos a{
+    background-color: var(--cor-azul);
+    color: var(--cor-branca);
+    width: 100%;
+    display: block;
+    padding: 13px;
+    border-radius: 10px;
+    transition: .3s ease;
+
+    &:hover {
+        background-color: var(--cor-azul-escuro);
+    }
+    &:active{
+        opacity: 70%;
+    }
+}
+.SeccaoDePrecosOsPrecos .OsPrecos .PlanoBasico {
+    border: 1px solid var(--cor-branca);
+    border-radius: 17px 0 0 17px;
+}
+.SeccaoDePrecosOsPrecos .OsPrecos .PlanoMedio {
+    border-top: 1px solid var(--cor-branca);
+    border-bottom: 1px solid var(--cor-branca);
+    position: relative;
+}
+.SeccaoDePrecosOsPrecos .OsPrecos .PlanoMedio::after{
+    position: absolute;
+    content: 'POPULAR 😎';
+    right: 30px;
+    background-color: var(--cor-lilas);
+    padding: 0 5px;
+    color: var(--cor-branca);
+    border-radius: 3px;
+    font-size: .9em;
+    box-shadow: -5px 5px 5px #00000069;
+    animation: PopularSubindoDescendo 2s alternate linear infinite;
+}
+.SeccaoDePrecosOsPrecos .OsPrecos .PlanoVip {
+    border: 1px solid var(--cor-branca);
+    border-radius: 0 17px 17px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @keyframes AnimacaoParaMenuDesk {
     0% {
         opacity: 0;
         transform: translateY(40px);
     }
-
     100% {
         opacity: 1;
         transform: translateY(0px);
@@ -686,7 +1100,6 @@ summary {
         opacity: 0;
         margin-right: -100px;
     }
-
     100% {
         opacity: 1;
         margin-right: 0;
@@ -702,7 +1115,14 @@ summary {
         opacity: 1;
     }
 }
-
+@keyframes PopularSubindoDescendo {
+    0%{
+        top:-5px;
+    }
+    100%{
+        top: -15px;
+    }
+}
 @media screen and (max-width: 1301px) {
     .Header {
         justify-content: space-between;
@@ -787,49 +1207,38 @@ summary {
         min-width: 220px;
     }
 }
-@media screen and (max-width: 660px) {
-    .SeccaoDeIntro .ContadorDeServicos{
-        justify-content: center !important;
+@media screen and (max-width: 805px) {
+    .SeccaoDePrecosOsPrecos .OsPrecos {
+        flex-wrap: wrap;
+    }
+    .SeccaoDePrecosOsPrecos .OsPrecos .Precos {
+        border: 1px solid var(--cor-branca);
+        margin: 5px;
+        border-radius: 17px;
+    }
+    .SeccaoDePrecosOsPrecos .OsPrecos .PlanoMedio {
+        margin-top: 15px;
+    }
+}
+@media screen and (max-width: 702px) {
+    .AsIntrosDasSeccaoes .OsCardsDeDestaques::after{
+        display: none;
+    }
+    .AsIntrosDasSeccaoes .OsCardsDeDestaques .DestaqueCard {
+        max-width: 100% !important;
+    }
+    .AsIntrosDasSeccaoes .OsCardsDeDestaques .DestaqueCard span svg {
+        width: 80px !important;
+        height: 80px !important;
+    }
+    .AsIntrosDasSeccaoes .OsCardsDeDestaques .DestaqueCard p {
+        font-size: 1.2em !important;
     }
 }
 @media screen and (max-width: 640px) {
     .AsIntrosDasSeccaoes .OsCardsDeDestaques {
         flex-wrap: wrap;
         justify-content: space-evenly;
-    }
-    .SeccaoDeIntro .IntroBtn {
-        margin-top: -20px;
-    }
-}
-@media screen and (max-width: 580px) {
-    .SeccaoDeIntro .ContadorDeServicos {
-        justify-content: center;
-        flex-wrap: nowrap;
-        margin-top: 20px;
-    }
-    .SeccaoDeIntro .ContadorDeServicos .numero {
-        text-align: center;
-        font-size: 1.5em;
-    }
-    .SeccaoDeIntro .ContadorDeServicos .descnum {
-        display: none;
-    }
-    .SeccaoDeIntro .ContadorDeServicos div {
-        width: 160px;
-        padding: 10px 0 0 0;
-        margin: 0;
-    }
-    .SeccaoDeIntro .ContadorDeServicos .ProjectosFeitos {
-        width: 120px;
-    }
-    .SeccaoDeIntro .ContadorDeServicos .ProjectosRequisitados {
-        width: 150px;
-    }
-    .SeccaoDeIntro .ContadorDeServicos .ProjectosFeitos::after,
-    .SeccaoDeIntro .ContadorDeServicos .ProjectosEmAndamento::after,
-    .SeccaoDeIntro .ContadorDeServicos .ProjectosRequisitados::after {
-        margin-top: 5px;
-        font-size: .5em;
     }
 }
 @media screen and (max-width: 550px) {
@@ -889,10 +1298,7 @@ summary {
     .SeccaoDeIntro .PequenaDescricao p{
         line-height: 27px;
     }
-    .SeccaoDeIntro .ContadorDeServicos {
-        flex-wrap: wrap;
-        margin-bottom: 30px;
-    }
+
 }
 @media screen and (max-width: 366px){
     .SeccaoDeIntro .IntroBtn {
