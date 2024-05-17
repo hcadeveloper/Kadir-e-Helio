@@ -11,8 +11,10 @@
     --cor-preta-transparente: #ffffffa2;
     --cor-do-inpuSearchMob: #000;
     --cor-lilas: #d000ff;
+    --cor-lilas-a: #9904bb;
     --cor-do-fundo-do-site: #d8d8d8;
     --cor-do-fundo-do-preco: #86868676;
+    --cor-fundo-depoimento: #0092ed3e;
     --cor-do-header: #fff;
     --cor-do-link-do-header: #000;
     --cor-do-hover: #006bae;
@@ -26,6 +28,7 @@
     --cor-de-texto-cinza: #292929;
     --cor-branca: #fff;
     --cor-branca-b: #c7c7c7;
+    --cor-amarela: #fff200;
     --cor-azul: #0092ed;
     --cor-azul-escuro: #12364c;
     --cor-azul-claro: #0092ed3e;
@@ -43,9 +46,11 @@
     --cor-dark: #fff;
     --cor-dark-inverso: #000;
     --cor-lilas: #d000ff;
+    --cor-lilas-a: #9904bb;
     --cor-lilas-transparente: #d000ff38;
     --cor-do-fundo-do-preco: #ffffff49;
     --cor-do-fundo-do-site: #242424;
+    --cor-fundo-depoimento: #a9dbfab5;
     --cor-do-header: #202020;
     --cor-do-link-do-header: #ffffff;
     --cor-do-hover: #006bae;
@@ -58,6 +63,7 @@
     --cor-mit: #282828;
     --cor-do-fundo-intro: #222028;
     --cor-de-texto-cinza: #acacac;
+    --cor-amarela: #fff200;
 }
 * {
     padding: 0;
@@ -175,7 +181,6 @@ body::-webkit-scrollbar-thumb{
     background-color: var(--cor-preta-transparente);
     backdrop-filter: blur(4px);
     transition: 1s;
-
 }
 .LogoHeader img {
     width: 100%;
@@ -221,8 +226,10 @@ body::-webkit-scrollbar-thumb{
 .Nav ul li a .LinkCeta {
     position: absolute;
     margin-left: 4px;
-    margin-top: 8px;
+    margin-top: 11px;
+    transition: .3s ease;
     width: 11px;
+    height: 11px;
 }
 .Nav ul li a:hover .LinkCeta {
     transform: rotate(-180deg);
@@ -807,7 +814,6 @@ summary {
     color: var(--cor-dark);
     border-radius: 100px;
 }
-
 .Lme1 {
     animation-delay: .1s;
 }
@@ -944,7 +950,6 @@ summary {
     height: 30px;
     transition: .3s ease;
 }
-
 .SeccaoDePrecos {
     width: 100%;
     color: var(--cor-dark);
@@ -973,7 +978,6 @@ summary {
     line-height: 30px;
     opacity: 90%;
 }
-
 .SeccaoDePrecosOsPrecos {
     width: 100%;
     display: flex;
@@ -1070,6 +1074,148 @@ summary {
     border-radius: 0 17px 17px 0;
 }
 
+/* =====     DEPOIMENTOS     ===== */
+.SeccaoDeDepoimentos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 70px 0;
+    width: 100%;
+    max-width: 1500px;
+    background-color: var(--cor-fundo-depoimento);
+    border-radius: 20px;
+    border: 3px solid var(--cor-dark);
+    border-style: dashed;
+    margin: 0 auto;
+}
+.SeccaoDeDepoimentosIntroTitulo h3{
+    text-align: center;
+    font-size: 2em;
+    color: var(--cor-dark);
+}
+.SeccaoDeDepoimentosIntroDescricao {
+    margin: 0 auto;
+    text-align: center;
+    margin: 20px 0 30px 0;
+    line-height: 22px;
+    width: 100%;
+    max-width: 700px;
+    font-weight: 300;
+    color: var(--cor-dark);
+    font-size: 1.1em;
+    line-height: 30px;
+    opacity: 90%;
+}
+.SeccaoDeDepoimentosOsDepoimentos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 0 30px;
+}
+.OsDepoimentos {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.DepoimentosDoAutor {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0 10px;
+    padding: 25px 15px;
+}
+.FotoDoAutor {
+    position: relative;
+}
+.FotoDoAutor img {
+    width: 50px;
+    height: 50px;
+    border-radius: 52% 48% 66% 34% / 33% 18% 82% 67%;
+    margin-right: 5px;
+}
+.DescricaoDoAutor {
+    width: 100%;
+    max-width: 360px;
+    background-color: var(--cor-azul-escuro);
+    padding: 20px;
+    border-radius: 8% 92% 64% 36% / 53% 42% 58% 47% ;
+    margin-left: 10px;
+    position: relative;
+    transition: .3s ease;
+    &:hover{
+        box-shadow: 5px 6px 20px #000000ae;
+    }
+}
+/* .DescricaoDoAutor::after {
+    position: absolute;
+    content: '';
+    width: 20px;
+    height: 20px;
+    background-color: var(--cor-azul-escuro);
+    top: 0;
+    left: 0;
+    margin-left: -5px;
+    margin-top: 10px;
+    transform: rotate(45deg);
+    border-radius: 0px 0 10px 0;
+} */
+.NomeDoAutor {
+    color: var(--cor-branca);
+    text-align: left;
+    margin-bottom: 10px;
+    font-size: 1.1em;
+}
+.MsgDoAutor {
+    text-align: left;
+    font-size: .9em;
+    color: var(--cor-cinza-a);
+}
+.Avaliacao {
+    display: flex;
+    margin: 20px 0;
+    justify-content: space-between;
+}
+.Avaliacao svg {
+    width: 30px;
+    height: 30px;
+    color: var(--cor-amarela);
+}
+.FalarComAutor {
+    margin-bottom: 5px;
+}
+.FalarComAutor a {
+    text-decoration: none;
+    color: var(--cor-branca);
+    display: block;
+    text-align: center;
+    width: 100%;
+    background-color: var(--cor-lilas);
+    border-radius: 7px;
+    padding: 10px;
+    transition: .3s ease;
+
+    &:hover{
+        background-color: var(--cor-lilas-a);
+        transform: scale(98%);
+    }
+    &:active {
+        opacity: 60%;
+        transform: scale(90%);
+    }
+}
+.FalarComAutor a .Loader{
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+.FalarComAutor a svg{
+    width: 20px;
+    animation: LoderGirando 1s linear infinite;
+}
 
 
 
@@ -1079,16 +1225,7 @@ summary {
 
 
 
-
-
-
-
-
-
-
-
-
-
+/* =====     ANIMAÇÕES     ===== */
 
 @keyframes AnimacaoParaMenuDesk {
     0% {
@@ -1128,6 +1265,13 @@ summary {
         top: -15px;
     }
 }
+@keyframes LoderGirando {
+    100% {
+        transform: rotate(305deg);
+    }
+}
+/* =====     RESPONSIVIDADE     ===== */
+
 @media screen and (max-width: 1301px) {
     .Header {
         justify-content: space-between;
@@ -1224,6 +1368,13 @@ summary {
     .SeccaoDePrecosOsPrecos .OsPrecos .PlanoMedio {
         margin-top: 15px;
     }
+    .OsDepoimentos {
+        flex-wrap: wrap !important;
+    }
+    .DescricaoDoAutor {
+        max-width: 7000px !important;
+        margin: 10px;
+    }
 }
 @media screen and (max-width: 702px) {
     .AsIntrosDasSeccaoes .OsCardsDeDestaques::after{
@@ -1303,7 +1454,27 @@ summary {
     .SeccaoDeIntro .PequenaDescricao p{
         line-height: 27px;
     }
-
+    .DepoimentosDoAutor {
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+    /* .FotoDoAutor::after{
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        background-color: var(--cor-azul-escuro);
+        bottom: 0;
+        margin-left: -40px;
+        z-index: -1;
+        transform: rotate(45deg);
+    } */
+    .DescricaoDoAutor {
+        margin-top: 1.5%;
+    }
+    .DescricaoDoAutor::after {
+        display: none;
+    }
 }
 @media screen and (max-width: 366px){
     .SeccaoDeIntro .IntroBtn {
