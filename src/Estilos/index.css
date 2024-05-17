@@ -1082,12 +1082,12 @@ summary {
     flex-direction: column;
     text-align: center;
     padding: 70px 0;
-    width: 100%;
-    max-width: 1500px;
+    width: 98%;
     background-color: var(--cor-fundo-depoimento);
     border-radius: 20px;
     border: 3px solid var(--cor-dark);
     border-style: dashed;
+    overflow: hidden;
     margin: 0 auto;
 }
 .SeccaoDeDepoimentosIntroTitulo h3{
@@ -1096,12 +1096,7 @@ summary {
     color: var(--cor-dark);
 }
 .SeccaoDeDepoimentosIntroDescricao {
-    margin: 0 auto;
-    text-align: center;
     margin: 20px 0 30px 0;
-    line-height: 22px;
-    width: 100%;
-    max-width: 700px;
     font-weight: 300;
     color: var(--cor-dark);
     font-size: 1.1em;
@@ -1124,6 +1119,7 @@ summary {
 .DepoimentosDoAutor {
     width: 100%;
     display: flex;
+    /* flex-wrap: wrap; */
     justify-content: center;
     margin: 0 10px;
     padding: 25px 15px;
@@ -1317,6 +1313,11 @@ summary {
         padding: 10px;
     }
 }
+@media screen and (max-width: 894px) {
+    .DepoimentosDoAutor {
+        flex-wrap: wrap;
+    }
+}
 @media screen and (max-width: 864px) {
     .SeccaoDeIntroducao {
         display: flex;
@@ -1372,7 +1373,7 @@ summary {
         flex-wrap: wrap !important;
     }
     .DescricaoDoAutor {
-        max-width: 7000px !important;
+        max-width: 500px !important;
         margin: 10px;
     }
 }
@@ -1456,9 +1457,15 @@ summary {
     }
     .DepoimentosDoAutor {
         flex-wrap: wrap;
-        margin-top: 10px;
+        margin: 0 !important;
     }
-    /* .FotoDoAutor::after{
+    .DescricaoDoAutor{
+        border-radius: 10px;
+    }
+    .DescricaoDoAutor::after {
+        display: none;
+    }
+    .FotoDoAutor::after{
         position: absolute;
         content: '';
         width: 20px;
@@ -1468,12 +1475,9 @@ summary {
         margin-left: -40px;
         z-index: -1;
         transform: rotate(45deg);
-    } */
-    .DescricaoDoAutor {
-        margin-top: 1.5%;
     }
-    .DescricaoDoAutor::after {
-        display: none;
+    .FotoDoAutor img{
+        border-radius: 100px;
     }
 }
 @media screen and (max-width: 366px){
