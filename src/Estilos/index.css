@@ -1102,6 +1102,7 @@ summary {
     font-size: 1.1em;
     line-height: 30px;
     opacity: 90%;
+    padding: 0 5px;
 }
 .SeccaoDeDepoimentosOsDepoimentos {
     display: flex;
@@ -1119,7 +1120,6 @@ summary {
 .DepoimentosDoAutor {
     width: 100%;
     display: flex;
-    /* flex-wrap: wrap; */
     justify-content: center;
     margin: 0 10px;
     padding: 25px 15px;
@@ -1146,19 +1146,6 @@ summary {
         box-shadow: 5px 6px 20px #000000ae;
     }
 }
-/* .DescricaoDoAutor::after {
-    position: absolute;
-    content: '';
-    width: 20px;
-    height: 20px;
-    background-color: var(--cor-azul-escuro);
-    top: 0;
-    left: 0;
-    margin-left: -5px;
-    margin-top: 10px;
-    transform: rotate(45deg);
-    border-radius: 0px 0 10px 0;
-} */
 .NomeDoAutor {
     color: var(--cor-branca);
     text-align: left;
@@ -1266,6 +1253,7 @@ summary {
         transform: rotate(305deg);
     }
 }
+
 /* =====     RESPONSIVIDADE     ===== */
 
 @media screen and (max-width: 1301px) {
