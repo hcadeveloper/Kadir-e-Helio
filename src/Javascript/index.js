@@ -64,7 +64,7 @@ function MostrarOuOcultarMenu() {
 }
 
 // JS PARA IMPEDIR QUE A IMAGEM DO INTRO SEJA BAIXADA
-const NaoArastarOuBaixarImagem = document.getElementById('NaoArastarOuBaixarImagem');
+/*const NaoArastarOuBaixarImagem = document.getElementById('NaoArastarOuBaixarImagem');
 NaoArastarOuBaixarImagem.addEventListener('contextmenu', function (e) {
     e.preventDefault();
 });
@@ -75,7 +75,7 @@ NaoArastarOuBaixarImagem.addEventListener('touchstart', function (e) {
 
 NaoArastarOuBaixarImagem.addEventListener('dragstart', function (e) {
     e.preventDefault();
-});
+});*/
 
 // Remove a classe "avisoDeJavascript" se o JavaScript estiver habilitado
 document.addEventListener('DOMContentLoaded', function () {
@@ -92,3 +92,15 @@ window.addEventListener("blur", () =>{
 window.addEventListener("focus", () =>{
     document.title = docTitle;
 })
+
+// JS PARA MOSTRAR Loder
+// function MostrarLoader() {
+//     document.getElementById('Loader').style.display = 'block';
+//     document.getElementById('QueroConfirmar').style.display = 'none';
+
+//     function FecharLoader() {
+//         document.getElementById('Loader').style.display = 'none';
+//         document.getElementById('QueroConfirmar').style.display = 'block';
+//     }
+//     setTimeout(FecharLoader, 12000);
+// }
