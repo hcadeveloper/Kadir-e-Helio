@@ -1234,6 +1234,8 @@ body::-webkit-scrollbar-thumb{
     text-align: center;
     padding: 70px 10px;
     border-radius: 20px;
+
+    padding-bottom: 150px;
 }
 .SeccaoDePerguntasIntroFaq {
     color: var(--cor-cinza);
