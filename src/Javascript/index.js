@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
 // JS PARA TROCA DE ABAS
 let docTitle = document.title;
 window.addEventListener("blur", () =>{
-    document.title = "Ei! Volta Para Mim 😥";
+    document.title = "Esperamos por você . . . 😊";
 })
 window.addEventListener("focus", () =>{
     document.title = docTitle;
