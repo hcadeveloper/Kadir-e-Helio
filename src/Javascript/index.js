@@ -8,6 +8,7 @@ window.addEventListener("scroll", function () {
     Header.classList.toggle('AddCordoHeader', window.scrollY > 50)
     Header.classList.toggle('AddCordoHeader', window.scrollY > 50)
     SeccaoIATP.classList.toggle('SeccaoDeIrAoTop', window.scrollY > 300)
+    SeccaoIATP.classList.toggle('NaoMostrarSeccaoDeIrAoTop', window.scrollY > 0)
 })
 
 // JS PARA TEMA DARK
@@ -63,20 +64,6 @@ function MostrarOuOcultarMenu() {
     }
 }
 
-// JS PARA IMPEDIR QUE A IMAGEM DO INTRO SEJA BAIXADA
-/*const NaoArastarOuBaixarImagem = document.getElementById('NaoArastarOuBaixarImagem');
-NaoArastarOuBaixarImagem.addEventListener('contextmenu', function (e) {
-    e.preventDefault();
-});
-
-NaoArastarOuBaixarImagem.addEventListener('touchstart', function (e) {
-    e.preventDefault();
-});
-
-NaoArastarOuBaixarImagem.addEventListener('dragstart', function (e) {
-    e.preventDefault();
-});*/
-
 // Remove a classe "avisoDeJavascript" se o JavaScript estiver habilitado
 document.addEventListener('DOMContentLoaded', function () {
     const AvisoDeJavascript = document.querySelector('.AvisoDeJavascript');
@@ -104,3 +91,25 @@ window.addEventListener("focus", () =>{
 //     }
 //     setTimeout(FecharLoader, 12000);
 // }
+
+
+//  JS PARA ABRIR E FECHAR AS SECÇÃO DE PERGUNTAS FREQUENTES
+
+let perguntas = document.querySelectorAll('.Pergunta');
+function VirarParaCimaAPergutaSvg(event) {
+  let svgElement = event.currentTarget.querySelector('.perguntaSvg svg');
+  svgElement.style.transform = 'rotate(180deg)';
+}
+function VoltarEstadoNormalAPerguntaSvg(event) {
+  let svgElement = event.currentTarget.querySelector('.perguntaSvg svg');
+  svgElement.style.transform = 'rotate(0deg)';
+}
+perguntas.forEach(function(pergunta) {
+  pergunta.addEventListener('toggle', function(event) {
+    if (pergunta.open) {
+      VirarParaCimaAPergutaSvg(event);
+    } else {
+      VoltarEstadoNormalAPerguntaSvg(event);
+    }
+  });
+});
