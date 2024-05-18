@@ -34,6 +34,7 @@
 }
 :root[theme="escuro"] {
     --cor-branca: #fff;
+    --cor-branca-b: #c7c7c7;
     --cor-azul: #0092ed;
     --cor-azul-escuro: #12364c;
     --cor-azul-claro: #0092ed3e;
@@ -679,7 +680,9 @@ body::-webkit-scrollbar-thumb{
 } */
 
 /* =====     SECÇÃO DE IR AO TOPO    ===== */
-
+.SeccaoIATP a {
+    color: transparent;
+}
 .SeccaoIATP.SeccaoDeIrAoTop a{
     background-color: var(--cor-dark-inverso);
     width: 35px;
@@ -738,6 +741,9 @@ body::-webkit-scrollbar-thumb{
 .EntradaDeAnimacaoDireita{
     animation: EntraDoLadoDireito .3s ease;
 }
+
+/* =====     SECÇÃO INTRODUÇÃO DA PÁGINA     ===== */
+
 .SeccaoDeIntroducao {
     display: flex;
     justify-content: space-evenly;
@@ -1217,6 +1223,99 @@ body::-webkit-scrollbar-thumb{
     width: 20px;
     animation: LoderGirando 1s linear infinite;
 }
+
+/* =====     SECÁÃO DE PERGUNTAS     ===== */
+
+.SeccaoDePerguntas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 70px 10px;
+    border-radius: 20px;
+}
+.SeccaoDePerguntasIntroFaq {
+    color: var(--cor-cinza);
+}
+.SeccaoDePerguntasIntroTitulo{
+    text-align: center;
+    font-size: 2em;
+    color: var(--cor-dark);
+}
+.SeccaoDePerguntasIntroDescricao {
+    margin: 10px 0 30px 0;
+    color: var(--cor-cinza);
+}
+.SeccaoDasPerguntas {
+    width: 100%;
+    max-width: 700px;
+    transition: .3s ease;
+}
+.SeccaoDasPerguntas .Pergunta {
+    background-color: var(--cor-azul-escuro);
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
+}
+.SeccaoDasPerguntas .Pergunta .APergunta{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--cor-branca);
+    transition: .3s ease;
+    font-size: 1.2em;
+
+    &:hover {
+        background-color: transparent;
+        color: var(--cor-branca-b);
+    }
+}
+.SeccaoDasPerguntas .Pergunta .APergunta div {
+    display: flex;
+    align-items: center;
+}
+.SeccaoDasPerguntas .Pergunta .APergunta div svg {
+    width: 24px;
+    height: 24px;
+}
+.SeccaoDasPerguntas .Pergunta p {
+    color: var(--cor-cinza-a);
+    margin: 10px;
+    margin-top: 5px;
+    text-align: left;
+    font-size: 1em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
