@@ -1538,6 +1538,14 @@ body::-webkit-scrollbar-thumb{
         font-size: 1.2em !important;
     }
 }
+@media screen and (max-width: 692px) {
+    .SeccaoDasPerguntas .Pergunta .APergunta {
+        font-size: 1em;
+    }
+    .SeccaoDasPerguntas .Pergunta p {
+        font-size: .9em;
+    }
+}
 @media screen and (max-width: 640px) {
     .AsIntrosDasSeccaoes .OsCardsDeDestaques {
         flex-wrap: wrap;
