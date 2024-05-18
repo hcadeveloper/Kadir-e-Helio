@@ -31,6 +31,9 @@
     --cor-azul: #0092ed;
     --cor-azul-escuro: #12364c;
     --cor-azul-claro: #0092ed3e;
+    --Sombra-do-FAQ: #00000092;
+    --Verde-Do-Whatsap-claro: #128C7E;
+    --Verde-Do-Whatsap-escuro: #075E54;
 }
 :root[theme="escuro"] {
     --cor-branca: #fff;
@@ -64,6 +67,9 @@
     --cor-do-fundo-intro: #222028;
     --cor-de-texto-cinza: #acacac;
     --cor-amarela: #fff200;
+    --Sombra-do-FAQ: #000000cf;
+    --Verde-Do-Whatsap-claro: #128C7E;
+    --Verde-Do-Whatsap-escuro: #075E54;
 }
 * {
     padding: 0;
@@ -76,6 +82,7 @@ html {
 body {
     background-color: var(--cor-do-fundo-do-site);
     font-family: "Poppins", sans-serif;
+    user-select: none;
     transition: .3s;
 }
 body::-webkit-scrollbar{
@@ -94,6 +101,9 @@ body::-webkit-scrollbar-thumb{
     background-clip: text;
     color: transparent;
     transition: .3s ease;
+}
+.FundoGradiente {
+    background: linear-gradient(to right, var(--cor-lilas), var(--cor-azul));
 }
 .BtnLogin {
     display: flex;
@@ -674,12 +684,9 @@ body::-webkit-scrollbar-thumb{
     margin-top: 5px;
     width: 1em;
 }
-/* .SeccaoIATP a {
-    color: transparent;
-    background-color: red;
-} */
 
 /* =====     SECÇÃO DE IR AO TOPO    ===== */
+
 .SeccaoIATP a {
     color: transparent;
 }
@@ -750,7 +757,6 @@ body::-webkit-scrollbar-thumb{
     width: 100%;
     padding: 60px 50px 50px 50px;
     border-radius: 0 0 20px 20px;
-    user-select: none;
 }
 .DescricaoDaIntro {
     width: 100%;
@@ -1234,7 +1240,6 @@ body::-webkit-scrollbar-thumb{
     text-align: center;
     padding: 70px 10px;
     border-radius: 20px;
-
     padding-bottom: 150px;
 }
 .SeccaoDePerguntasIntroFaq {
@@ -1251,8 +1256,13 @@ body::-webkit-scrollbar-thumb{
 }
 .SeccaoDasPerguntas {
     width: 100%;
-    max-width: 700px;
+    max-width: 800px;
     transition: .3s ease;
+    background-image: url(/src/Imagens/Fodo-da-Seccao-de-Perguntas.webp);
+    background-size: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 30px var(--Sombra-do-FAQ);
 }
 .SeccaoDasPerguntas .Pergunta {
     background-color: var(--cor-azul-escuro);
@@ -1288,9 +1298,42 @@ body::-webkit-scrollbar-thumb{
     text-align: left;
     font-size: 1em;
 }
+.AindaComDuvidas {
+    margin-top: 40px;
+}
+.AindaComDuvidasDescricao {
+    color: var(--cor-dark);
+    font-weight: 500;
+}
+.AindaComDuvidasBtnWhatsapp a{
+    background-color: var(--Verde-Do-Whatsap-claro);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: var(--cor-branca);
+    width: 150px;
+    padding: 7px;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 20px;
+    transition: .2s ease;
 
-
-
+    &:hover{
+        background-color: var(--Verde-Do-Whatsap-escuro) !important;
+    }
+    &:active {
+        transform: scale(95%);
+    }
+}
+.AindaComDuvidasBtnWhatsapp a div {
+    display: flex;
+    align-items: center;
+}
+.AindaComDuvidasBtnWhatsapp a div svg {
+    width: 25px;
+    height: 25px;
+}
 
 
 
