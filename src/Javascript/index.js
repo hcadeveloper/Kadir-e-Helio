@@ -118,5 +118,7 @@ perguntas.forEach(function(pergunta) {
 function atualizarAnoAtual() {
     const anoAtual = new Date().getFullYear();
     document.getElementById("AnoAtual").textContent = anoAtual;
+    document.getElementById("AnoAtual2").textContent = anoAtual;
+    document.getElementById("AnoAtual3").textContent = anoAtual;
 }
 atualizarAnoAtual();
