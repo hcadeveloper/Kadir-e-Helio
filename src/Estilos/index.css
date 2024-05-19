@@ -34,6 +34,9 @@
     --Sombra-do-FAQ: #00000092;
     --Verde-Do-Whatsap-claro: #128C7E;
     --Verde-Do-Whatsap-escuro: #075E54;
+    --cor-do-fundo-do-Rodape: #000000;
+    --cor-branca-transparente: #ffffff3c;
+
 }
 :root[theme="escuro"] {
     --cor-branca: #fff;
@@ -70,6 +73,8 @@
     --Sombra-do-FAQ: #000000cf;
     --Verde-Do-Whatsap-claro: #128C7E;
     --Verde-Do-Whatsap-escuro: #075E54;
+    --cor-do-fundo-do-Rodape: #000000;
+    --cor-branca-transparente: #ffffff3c;
 }
 * {
     padding: 0;
@@ -1336,34 +1341,201 @@ body::-webkit-scrollbar-thumb{
 }
 
 
+/* =====     SECÇÃO DO RODAPÉ     ===== */
 
+.SeccaoDoRodape {
+    background-color: var(--cor-do-fundo-do-Rodape);
+    width: 100%;
+    padding: 50px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0;
+    position: relative;
+}
+.SeccaoDoRodapeDescricaoDireitos {
+    width: 100%;
+    max-width: 350px;
+}
+.Srd2 {
+    display: none;
+}
+.SeccaoDoRodapeDescricaoDireitos .ImagemNomeDoSite{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.ImagemNomeDoSite .ImagemDosite img{
+    width: 50px;
+    height: 50px;
+    margin-right: 5px;
+    border-radius: 10px;
+    background-color: var(--cor-azul-escuro);
+    padding: 4px;
+}
+.ImagemNomeDoSite .NomeDosite h2{
+    display: flex;
+    gap: 4px;
+    color: var(--cor-branca);
+}
+.SeccaoDoRodapeDescricaoDireitos .DescricaoDoSite {
+    margin: 20px 0;
+}
+.SeccaoDoRodapeDescricaoDireitos .DescricaoDoSite p{
+    font-size: 1em;
+    color: var(--cor-cinza-a);
+}
+.BtnDeNossoApp {
+    display: flex;
+    gap: 20px;
+}
+.BtnDeNossoApp .BtnDeNossoAppLinks a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--cor-branca);
+    background-color: var(--cor-azul-escuro);
+    padding: 10px;
+    border-radius: 7px;
+    transition: .2s;
 
+    &:active {
+        opacity: 80%;
+    }
+    &:hover{
+        background-color: var(--cor-azul);
+    }
+}
+.BtnDeNossoApp .BtnDeNossoAppLinks a .svg .LodoDaApple {
+    filter: invert();
+    width: 27px;
+}
+.BtnDeNossoApp .BtnDeNossoAppLinks a .svg img{
+    width: 25px;
+    height: auto;
+}
+.BtnDeNossoApp .BtnDeNossoAppLinks a .ConteudoDoBtn p{
+    font-size: .7em;
+}
+.BtnDeNossoApp .BtnDeNossoAppLinks a .ConteudoDoBtn h4 {
+    margin-top: -4px;
+}
+.SeccaoDoRodapeDescricaoDireitos .Copyrigth {
+    display: flex;
+    margin-top: 20px;
+    color: var(--cor-branca);
+}
+.SeccaoDoRodapeDescricaoDireitos .Copyrigth  {
+    gap: 7px;
+}
+.SeccaoDoRodapeDescricaoDireitos .Copyrigth a {
+    color: var(--cor-lilas);
+    font-weight: bold;
+    position: relative;
 
+    &:hover::after{
+        width: 100%;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: var(--cor-lilas);
+        bottom: 0;
+        left: 0;
+        transition: .2s ease;
+    }
+}
+.SeccaoDoRodapeOsLinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1000px;
+    margin-left: 20px;
+}
+.SeccaoDoRodapeOsLinks .osLinks {
+    margin: 4px;
+}
+.SeccaoDoRodapeOsLinks .osLinks .osLinksTitulo {
+    color: var(--cor-branca);
+    margin-bottom: 10px;
+}
+.SeccaoDoRodapeOsLinks .osLinks .LinksDoRodape ul {
+    list-style: none;
+}
+.SeccaoDoRodapeOsLinks .osLinks .LinksDoRodape ul li {
+    margin: 14px 0;
+}
+.SeccaoDoRodapeOsLinks .osLinks .LinksDoRodape ul li a {
+    color: var(--cor-cinza-a);
+    font-size: .9em;
+}
+.InscricaoNaNewsLetter {
+    width: 100%;
+    max-width: 350px;
+    padding: 25px;
+    border-radius: 30px;
+    position: relative;
+}
+.InscricaoNaNewsLetterTitulo {
+    width: 100%;
+    color: var(--cor-branca);
+}
+.InscricaoNaNewsLetterDescricao {
+    margin-top: 10px;
+    width: 100%;
+    color: var(--cor-cinza-a);
+}
+.InscricaoNaNewsLetterInputBox {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+}
+.InscricaoNaNewsLetterInputBox .InputeEmailN {
+    padding: 14px;
+    background-color: var(--cor-branca-transparente);
+    border: 1px solid var(--cor-branca);
+    border-radius: 50px;
+    width: 100%;
+    height: 50px;
+    color: var(--cor-branca);
+    letter-spacing: .5px;
+    margin-bottom: 15px;
+    font-size: 1em;
 
+    &::placeholder{
+        color: var(--cor-branca-b);
+    }
+    &:focus{
+        box-shadow: 0 0 5px 5px #ffffff5b;
+        outline: none;
+        border: 1px solid transparent;
+    }
+}
+.InscricaoNaNewsLetterInputBox .InputSubmitN{
+    font-size: 1em;
+    padding: 14px;
+    border-radius: 50px;
+    width: 100%;
+    max-width: 150px;
+    border: none;
+    cursor: pointer;
+    transition: .2s ease;
+    color: var(--cor-preta);
 
+    &:hover {
+        background-color: var(--cor-azul-escuro);
+        color: var(--cor-branca);
+    }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    &:focus{
+        box-shadow: 0 0 5px 5px #ffffff5b;
+        outline: none;
+    }
+}
 
 
 /* ============================= */
@@ -1441,6 +1613,35 @@ body::-webkit-scrollbar-thumb{
     }
     .HeaderBtn .SeInscrever {
         width: 139px;
+    }
+}
+@media screen and (max-width: 1270px) {
+    .SeccaoDoRodape {
+        flex-wrap: wrap;
+    }
+    .Srd1 {
+        display: none;
+    }
+    .Srd2{
+        display: block;
+        margin: 20px;
+    }
+    .SeccaoDoRodapeOsLinks {
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 974px) {
+    .SeccaoDoRodapeOsLinks{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .SeccaoDoRodapeOsLinks .osLinks {
+        margin: 30px;
+    }
+}
+@media screen and (max-width: 955px) {
+    .SeccaoDoRodapeOsLinks {
+        flex-wrap: wrap;
     }
 }
 @media screen and (max-width: 939px) {
