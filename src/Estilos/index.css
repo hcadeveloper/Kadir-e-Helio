@@ -1346,7 +1346,7 @@ body::-webkit-scrollbar-thumb{
 .SeccaoDoRodape {
     background-color: var(--cor-do-fundo-do-Rodape);
     width: 100%;
-    padding: 50px 10px;
+    padding: 50px 50px 20px 50px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -1388,6 +1388,7 @@ body::-webkit-scrollbar-thumb{
 .BtnDeNossoApp {
     display: flex;
     gap: 20px;
+    flex-wrap: wrap;
 }
 .BtnDeNossoApp .BtnDeNossoAppLinks a {
     display: flex;
@@ -1424,10 +1425,9 @@ body::-webkit-scrollbar-thumb{
     display: flex;
     margin-top: 20px;
     color: var(--cor-branca);
-}
-.SeccaoDoRodapeDescricaoDireitos .Copyrigth  {
     gap: 7px;
 }
+
 .SeccaoDoRodapeDescricaoDireitos .Copyrigth a {
     color: var(--cor-lilas);
     font-weight: bold;
@@ -1452,7 +1452,6 @@ body::-webkit-scrollbar-thumb{
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1000px;
     margin-left: 20px;
 }
 .SeccaoDoRodapeOsLinks .osLinks {
@@ -1461,6 +1460,7 @@ body::-webkit-scrollbar-thumb{
 .SeccaoDoRodapeOsLinks .osLinks .osLinksTitulo {
     color: var(--cor-branca);
     margin-bottom: 10px;
+    font-size: 1.4em;
 }
 .SeccaoDoRodapeOsLinks .osLinks .LinksDoRodape ul {
     list-style: none;
@@ -1470,7 +1470,14 @@ body::-webkit-scrollbar-thumb{
 }
 .SeccaoDoRodapeOsLinks .osLinks .LinksDoRodape ul li a {
     color: var(--cor-cinza-a);
-    font-size: .9em;
+    font-size: 1.3em;
+
+    &:hover{
+        color: var(--cor-lilas);
+    }
+    &:active {
+        opacity: 50%;
+    }
 }
 .InscricaoNaNewsLetter {
     width: 100%;
@@ -1615,7 +1622,7 @@ body::-webkit-scrollbar-thumb{
         width: 139px;
     }
 }
-@media screen and (max-width: 1270px) {
+@media screen and (max-width: 1610px) {
     .SeccaoDoRodape {
         flex-wrap: wrap;
     }
@@ -1628,15 +1635,25 @@ body::-webkit-scrollbar-thumb{
     }
     .SeccaoDoRodapeOsLinks {
         flex-wrap: wrap;
+        margin: 0;
     }
 }
+@media screen and (max-width: 1220px) {
+
+}
 @media screen and (max-width: 974px) {
+    .SeccaoDoRodape {
+        padding: 50px 0;
+    }
     .SeccaoDoRodapeOsLinks{
         flex-wrap: wrap;
-        justify-content: center;
+        justify-content: left;
     }
     .SeccaoDoRodapeOsLinks .osLinks {
         margin: 30px;
+    }
+    .InscricaoNaNewsLetter {
+        margin-right: 20px;
     }
 }
 @media screen and (max-width: 955px) {
@@ -1778,6 +1795,21 @@ body::-webkit-scrollbar-thumb{
     .MenuMobile .OsLinkisMobile ul .BtnLogin .SeInscrever {
         border: 1px solid var(--cor-azul-claro) !important;
         background-color: var(--cor-azul-claro);
+    }
+}
+@media screen and (max-width: 765px) {
+    .SeccaoDoRodapeOsLinks{
+        justify-content: center;
+    }
+    .Srd1 {
+        display: block;
+        margin: 0 10px;
+    }
+    .Srd2{
+        display: none;
+    }
+    .SeccaoDoRodapeDescricaoDireitos .Copyrigth {
+        display: none;
     }
 }
 @media screen and (max-width: 439px) {
