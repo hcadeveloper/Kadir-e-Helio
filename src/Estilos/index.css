@@ -1225,15 +1225,6 @@ body::-webkit-scrollbar-thumb{
         transform: scale(90%);
     }
 }
-.FalarComAutor a .Loader{
-    display: flex;
-    justify-content: center;
-    display: none;
-}
-.FalarComAutor a svg{
-    width: 20px;
-    animation: LoderGirando 1s linear infinite;
-}
 
 /* =====     SECÁÃO DE PERGUNTAS     ===== */
 
@@ -1288,11 +1279,11 @@ body::-webkit-scrollbar-thumb{
         color: var(--cor-branca-b);
     }
 }
-.SeccaoDasPerguntas .Pergunta .APergunta div {
+.SeccaoDasPerguntas .Pergunta .APergunta section {
     display: flex;
     align-items: center;
 }
-.SeccaoDasPerguntas .Pergunta .APergunta div svg {
+.SeccaoDasPerguntas .Pergunta .APergunta section svg {
     width: 24px;
     height: 24px;
 }
@@ -1331,11 +1322,11 @@ body::-webkit-scrollbar-thumb{
         transform: scale(95%);
     }
 }
-.AindaComDuvidasBtnWhatsapp a div {
+.AindaComDuvidasBtnWhatsapp a section {
     display: flex;
     align-items: center;
 }
-.AindaComDuvidasBtnWhatsapp a div svg {
+.AindaComDuvidasBtnWhatsapp a section svg {
     width: 25px;
     height: 25px;
 }
