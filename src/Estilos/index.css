@@ -1100,8 +1100,8 @@ body::-webkit-scrollbar-thumb{
     color: var(--cor-branca);
     border-radius: 3px;
     font-size: .9em;
+    top: -10px;
     box-shadow: -5px 5px 5px #00000069;
-    animation: PopularSubindoDescendo 2s alternate linear infinite;
 }
 .SeccaoDePrecosOsPrecos .OsPrecos .PlanoVip {
     border: 1px solid var(--cor-branca);
@@ -1599,14 +1599,6 @@ body::-webkit-scrollbar-thumb{
     }
     100% {
         opacity: 1;
-    }
-}
-@keyframes PopularSubindoDescendo {
-    0%{
-        top:-5px;
-    }
-    100%{
-        top: -15px;
     }
 }
 @keyframes LoderGirando {
