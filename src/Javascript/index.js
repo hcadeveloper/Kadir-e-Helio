@@ -113,3 +113,10 @@ perguntas.forEach(function(pergunta) {
     }
   });
 });
+
+// JS PARA ADICIONAR ANO ACTUAL NO RODAPÉ
+function atualizarAnoAtual() {
+    const anoAtual = new Date().getFullYear();
+    document.getElementById("AnoAtual").textContent = anoAtual;
+}
+atualizarAnoAtual();
