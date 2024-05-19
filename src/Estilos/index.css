@@ -1346,19 +1346,17 @@ body::-webkit-scrollbar-thumb{
 .SeccaoDoRodape {
     background-color: var(--cor-do-fundo-do-Rodape);
     width: 100%;
-    padding: 50px 50px 20px 50px;
+    padding: 50px 50px 0 50px;
     display: flex;
     justify-content: center;
     align-items: center;
     bottom: 0;
     position: relative;
+    flex-direction: column;
 }
 .SeccaoDoRodapeDescricaoDireitos {
     width: 100%;
     max-width: 350px;
-}
-.Srd2 {
-    display: none;
 }
 .SeccaoDoRodapeDescricaoDireitos .ImagemNomeDoSite{
     display: flex;
@@ -1382,7 +1380,7 @@ body::-webkit-scrollbar-thumb{
     margin: 20px 0;
 }
 .SeccaoDoRodapeDescricaoDireitos .DescricaoDoSite p{
-    font-size: 1em;
+    font-size: 1.1em;
     color: var(--cor-cinza-a);
 }
 .BtnDeNossoApp {
@@ -1421,32 +1419,6 @@ body::-webkit-scrollbar-thumb{
 .BtnDeNossoApp .BtnDeNossoAppLinks a .ConteudoDoBtn h4 {
     margin-top: -4px;
 }
-.SeccaoDoRodapeDescricaoDireitos .Copyrigth {
-    display: flex;
-    margin-top: 20px;
-    color: var(--cor-branca);
-    gap: 7px;
-}
-
-.SeccaoDoRodapeDescricaoDireitos .Copyrigth a {
-    color: var(--cor-lilas);
-    font-weight: bold;
-    position: relative;
-
-    &:hover::after{
-        width: 100%;
-    }
-    &::after{
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 2px;
-        background-color: var(--cor-lilas);
-        bottom: 0;
-        left: 0;
-        transition: .2s ease;
-    }
-}
 .SeccaoDoRodapeOsLinks {
     display: flex;
     justify-content: space-between;
@@ -1460,7 +1432,7 @@ body::-webkit-scrollbar-thumb{
 .SeccaoDoRodapeOsLinks .osLinks .osLinksTitulo {
     color: var(--cor-branca);
     margin-bottom: 10px;
-    font-size: 1.4em;
+    font-size: 1.2em;
 }
 .SeccaoDoRodapeOsLinks .osLinks .LinksDoRodape ul {
     list-style: none;
@@ -1470,7 +1442,7 @@ body::-webkit-scrollbar-thumb{
 }
 .SeccaoDoRodapeOsLinks .osLinks .LinksDoRodape ul li a {
     color: var(--cor-cinza-a);
-    font-size: 1.3em;
+    font-size: 1em;
 
     &:hover{
         color: var(--cor-lilas);
@@ -1543,6 +1515,57 @@ body::-webkit-scrollbar-thumb{
         outline: none;
     }
 }
+.SeccaoDoRodape .Copyrigth {
+    display: flex;
+    width: 100%;
+    padding: 20px 0;
+    justify-content: center;
+    align-items: center;
+}
+.SeccaoDoRodape .Copyrigth .CopyR {
+    display: flex;
+    margin-top: 20px;
+    color: var(--cor-branca);
+    gap: 7px;
+    text-align: left;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.SeccaoDoRodape .Copyrigth a {
+    color: var(--cor-lilas);
+    font-weight: bold;
+    transition: .2s ease;
+    position: relative;
+
+    &:hover::after{
+        width: 100%;
+    }
+    &:active{
+        opacity: 50%;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        background-color: var(--cor-lilas);
+        bottom: 0;
+        left: 0;
+        transition: .2s ease;
+    }
+}
+.SeccaoDoRodape .CopyrigthLinks {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+
+
 
 
 /* ============================= */
@@ -1596,6 +1619,7 @@ body::-webkit-scrollbar-thumb{
 /* =====     RESPONSIVIDADE     ===== */
 /* ================================== */
 
+
 @media screen and (max-width: 1301px) {
     .Header {
         justify-content: space-between;
@@ -1626,28 +1650,23 @@ body::-webkit-scrollbar-thumb{
     .SeccaoDoRodape {
         flex-wrap: wrap;
     }
-    .Srd1 {
-        display: none;
-    }
-    .Srd2{
-        display: block;
-        margin: 20px;
-    }
     .SeccaoDoRodapeOsLinks {
         flex-wrap: wrap;
         margin: 0;
     }
 }
-@media screen and (max-width: 1220px) {
-
+@media screen and (max-width: 1201px) {
+    .SeccaoDoRodapeOsLinks .osLinks .osLinksTitulo {
+        font-size: 1.4em;
+    }
+    .SeccaoDoRodapeOsLinks .osLinks .LinksDoRodape ul li a {
+        font-size: 1.3em;
+    }
 }
 @media screen and (max-width: 974px) {
-    .SeccaoDoRodape {
-        padding: 50px 0;
-    }
     .SeccaoDoRodapeOsLinks{
         flex-wrap: wrap;
-        justify-content: left;
+        justify-content: center;
     }
     .SeccaoDoRodapeOsLinks .osLinks {
         margin: 30px;
@@ -1741,6 +1760,14 @@ body::-webkit-scrollbar-thumb{
         margin: 10px;
     }
 }
+@media screen and (max-width: 780px) {
+    .SeccaoDoRodape .Copyrigth {
+        flex-wrap: wrap;
+    }
+    .SeccaoDoRodape .Copyrigth .CopyR {
+        margin-bottom: 10px;
+    }
+}
 @media screen and (max-width: 702px) {
     .AsIntrosDasSeccaoes .OsCardsDeDestaques::after{
         display: none;
@@ -1801,13 +1828,6 @@ body::-webkit-scrollbar-thumb{
     .SeccaoDoRodapeOsLinks{
         justify-content: center;
     }
-    .Srd1 {
-        display: block;
-        margin: 0 10px;
-    }
-    .Srd2{
-        display: none;
-    }
     .SeccaoDoRodapeDescricaoDireitos .Copyrigth {
         display: none;
     }
@@ -1830,6 +1850,11 @@ body::-webkit-scrollbar-thumb{
     .SeccaoDeIntro .IntroBtn a {
         font-size: 1em;
         padding: 10px 15px;
+    }
+}
+@media screen and (max-width: 440px) {
+    .CopyrigthLinks {
+        flex-wrap: wrap;
     }
 }
 @media screen and (max-width: 411px) {
