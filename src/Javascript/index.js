@@ -80,19 +80,6 @@ window.addEventListener("focus", () =>{
     document.title = docTitle;
 })
 
-// JS PARA MOSTRAR Loder
-// function MostrarLoader() {
-//     document.getElementById('Loader').style.display = 'block';
-//     document.getElementById('QueroConfirmar').style.display = 'none';
-
-//     function FecharLoader() {
-//         document.getElementById('Loader').style.display = 'none';
-//         document.getElementById('QueroConfirmar').style.display = 'block';
-//     }
-//     setTimeout(FecharLoader, 12000);
-// }
-
-
 //  JS PARA ABRIR E FECHAR AS SECÇÃO DE PERGUNTAS FREQUENTES
 
 let perguntas = document.querySelectorAll('.Pergunta');
