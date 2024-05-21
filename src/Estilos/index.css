@@ -1194,6 +1194,13 @@ body::-webkit-scrollbar-thumb{
 }
 .MsgDoAutor p a{
     color: var(--cor-azul);
+
+    &:hover{
+        color: var(--cor-lilas);
+    }
+    &:active {
+        opacity: 50%;
+    }
 }
 .Avaliacao {
     display: flex;
