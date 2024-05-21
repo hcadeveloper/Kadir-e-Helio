@@ -1192,6 +1192,9 @@ body::-webkit-scrollbar-thumb{
     font-size: .9em;
     color: var(--cor-cinza-a);
 }
+.MsgDoAutor p a{
+    color: var(--cor-azul);
+}
 .Avaliacao {
     display: flex;
     margin: 20px 0;
