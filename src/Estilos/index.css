@@ -1063,7 +1063,7 @@ body::-webkit-scrollbar-thumb{
 }
 .SeccaoDePrecosOsPrecos .OsPrecos .Precos .BtnPrecos {
     text-align: center;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
 }
 .SeccaoDePrecosOsPrecos .OsPrecos .Precos .BtnPrecos a{
     background-color: var(--cor-azul);
@@ -1083,11 +1083,15 @@ body::-webkit-scrollbar-thumb{
     }
 }
 .SeccaoDePrecosOsPrecos .OsPrecos .PlanoBasico {
-    border: 1px solid var(--cor-branca);
+    border-top: 1px solid var(--cor-branca);
+    border-left: 1px solid var(--cor-branca);
+    border-bottom: 1px solid var(--cor-branca);
     border-radius: 17px 0 0 17px;
 }
 .SeccaoDePrecosOsPrecos .OsPrecos .PlanoMedio {
     border-top: 1px solid var(--cor-branca);
+    border-right: 1px solid var(--cor-branca);
+    border-left: 1px solid var(--cor-branca);
     border-bottom: 1px solid var(--cor-branca);
     position: relative;
 }
@@ -1104,7 +1108,9 @@ body::-webkit-scrollbar-thumb{
     box-shadow: -5px 5px 5px #00000069;
 }
 .SeccaoDePrecosOsPrecos .OsPrecos .PlanoVip {
-    border: 1px solid var(--cor-branca);
+    border-top: 1px solid var(--cor-branca);
+    border-right: 1px solid var(--cor-branca);
+    border-bottom: 1px solid var(--cor-branca);
     border-radius: 0 17px 17px 0;
 }
 
