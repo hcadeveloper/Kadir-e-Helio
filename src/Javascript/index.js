@@ -104,3 +104,8 @@ function atualizarAnoAtual() {
     document.getElementById("AnoAtual").textContent = anoAtual;
 }
 atualizarAnoAtual();
+
+// JS PARA FECHAR AVISO DE ESTE SITE É UM PROJECTO
+function FecharAvisoDeProjecto(){
+    document.getElementById('IssoEApenasUmProjecto').style.display = 'none';
+}
