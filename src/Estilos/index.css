@@ -32,12 +32,14 @@
     --cor-azul: #0092ed;
     --cor-azul-escuro: #12364c;
     --cor-azul-claro: #0092ed3e;
+    --cor-azul-transparente: #0092ed30;
     --Sombra-do-FAQ: #00000092;
     --Verde-Do-Whatsap-claro: #128C7E;
     --Verde-Do-Whatsap-escuro: #075E54;
     --cor-do-fundo-do-Rodape: #000000;
     --cor-branca-transparente: #ffffff3c;
     --cor-cinza-txt: #434343;
+    --cor-azul-escuro-claro: #ffffff;
 
 }
 :root[theme="escuro"] {
@@ -79,6 +81,7 @@
     --cor-do-fundo-do-Rodape: #000000;
     --cor-branca-transparente: #ffffff3c;
     --cor-cinza-txt: #bebebe;
+    --cor-azul-escuro-claro: #12364c;
 
 }
 * {
@@ -213,8 +216,6 @@ body::-webkit-scrollbar-thumb{
     max-width: 40px;
     min-width: 35px;
     height: auto;
-
-    /* margin-right: 5px; */
     border-radius: 10px;
     background-color: var(--cor-azul-escuro);
     padding: 4px;
@@ -1766,6 +1767,265 @@ body::-webkit-scrollbar-thumb{
         opacity: 50%;
     }
 }
+
+/* =====    SECÇÃO DE FORMULÁRIO DE ENTRAR     ===== */
+
+.SeccaoDeEntrarLogin {
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    margin-top: -25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.TopEntrar {
+    margin-top: 20px;
+}
+.TopCriarConta {
+    margin-top: 30px;
+}
+.SeccaoDoFormulario {
+    background-color: var(--cor-azul-escuro-claro);
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    padding: 30px;
+    border: 1px solid var(--cor-dark);
+    box-shadow:  5px -5px 20px 5px #0000006d;
+}
+.SeccaoDoFormularioIntro {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.SeccaoDoFormularioIntro .txt {
+    font-size: 1.2em;
+    color: var(--cor-cinza);
+    margin-bottom: 5px;
+}
+.SeccaoDoFormularioIntro .titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+}
+.SeccaoDoFormularioIntro .titulo .imagem {
+    display: flex;
+    align-items: center;
+}
+.SeccaoDoFormularioIntro .titulo .imagem img {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    padding: 4px;
+}
+.SeccaoDoFormularioIntro .titulo .NomeDoSite {
+    display: flex;
+    align-items: center;
+}
+.SeccaoDoFormularioIntro .titulo .NomeDoSite p{
+    color: var(--cor-dark);
+    font-size: 1.6em;
+    font-weight: 500;
+}
+.SeccaoDeEntrarLogin .EntrarComGoogle {
+    margin-bottom: 10px;
+}
+.SeccaoDeEntrarLogin .EntrarComGoogle a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-dark);
+    border: 1px solid var(--cor-dark);
+    gap: 10px;
+    padding: 5px;
+    transition: .2s ease;
+    border-radius: 4px;
+    
+    &:active {
+        opacity: 50%;
+    }
+
+    &:hover {
+        background-color: var(--cor-azul-claro);
+        border: 1px solid transparent;
+    }
+}
+.EntrarComGoogle .LogoDaGoogle {
+    display: flex;
+    align-items: center;
+}
+.EntrarComGoogle .LogoDaGoogle img {
+    width: 20px;
+    height: 20px;
+}
+.SeccaoDeEntrarLogin .EntrarComGoogle a .EntrarComGoogleTxt {
+    display: flex;
+    align-items: center;
+}
+.SeccaoDeEntrarLogin .EntrarComGoogle a .EntrarComGoogleTxt p{
+    font-size: 1.1em;
+}
+.TrocarLogin {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+    border-top: 1px solid var(--cor-dark);
+    margin-top: 20px;
+    padding-bottom: 30px;
+}
+.TrocarLogin section a {
+    color: var(--cor-cinza-a);
+    border-bottom: 2px solid transparent;
+    padding:  10px;
+}
+.TrocarLogin section .LinkSublinhado{
+    border-bottom: 2px solid var(--cor-azul);
+    color: var(--cor-azul);
+}
+.FormularioDeLoginEntrar .InputBox {
+    margin-top: 15px;
+}
+.FormularioDeLoginEntrar .InputBox .OsInputes{
+    border-radius: 4px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+.FormularioDeLoginEntrar .InputBox .OsInputes label {
+    font-size: .9em;
+    color: var(--cor-dark);
+    padding: 0 10px;
+    margin-left: 10px;
+    margin-top: -12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: var(--cor-azul-escuro-claro);
+    cursor: text;
+}
+.FormularioDeLoginEntrar .InputBox .OsInputes label .AsteriscoRequered{
+    margin-left: 4px;
+    color: var(--cor-dark);
+}
+.FormularioDeLoginEntrar .InputBox .OsInputes .OsSvg svg {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    margin-top: -15px;
+    margin-left: 10px;
+    color: var(--cor-dark);
+}
+.FormularioDeLoginEntrar .InputBox section input {
+    width: 100%;
+    height: 45px;
+    background-color: transparent;
+    padding: 25px 10px 20px 35px;
+    outline: 0;
+    font-size: 1.1em;
+    color: var(--cor-dark);
+    margin-bottom: 15px;
+    border: 1px solid var(--cor-cinza-a);
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+
+    &:focus{
+        border: 1px solid var(--cor-dark);
+    }
+}
+.SeccaoDeEsqueciSenha {
+    display: flex;
+    justify-content: space-between;
+    margin-top: -13px;
+}
+.SeccaoDeEsqueciSenha section label {
+    display: flex;
+    align-items: center;
+    font-size: .9em;
+    color: var(--cor-dark);
+    cursor: pointer;
+    transition: .2s ease;
+
+    &:hover {
+        color: var(--cor-azul) !important;
+    }
+}
+.SeccaoDeEsqueciSenha section label input {
+    margin-right: 5px;
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--cor-azul);
+}
+.SeccaoDeEsqueciSenha .EsqueciSenha a {
+    color: var(--cor-dark);
+    font-size: .9em;
+    transition: .2s ease;
+
+    &:hover {
+        color: var(--cor-azul);
+    }
+}
+.SeccaoDeBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 20px;
+}
+.SeccaoDeBtn section {
+    width: 100%;
+}
+.SeccaoDeBtn section input{
+    background-color: var(--cor-azul);
+    width: 100%;
+    margin-bottom: 10px;
+    border: 0;
+    text-transform: uppercase;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--cor-branca);
+    transition: .2s ease;
+
+    &:hover {
+        opacity: 60%;
+    }
+    &:active {
+        transform: scale(95%);
+    }
+}
+.SeccaoDeBtn section a{
+    text-transform: uppercase;
+    border: 1px solid var(--cor-dark);
+    width: 100%;    
+    padding: 7px;
+    font-size: 1em;
+    border-radius: 4px;
+    cursor: pointer;
+    color: var(--cor-dark);
+    transition: .2s ease;
+    display: block;
+    text-align: center;
+
+    &:hover {
+        background-color: var(--cor-azul-transparente);
+    }
+}
+
+
 
 
 
