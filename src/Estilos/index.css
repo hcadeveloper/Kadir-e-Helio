@@ -350,6 +350,7 @@ body::-webkit-scrollbar-thumb{
     border-radius: 3px;
     height: auto;
     width: 40px;
+    box-shadow: 2px 2px 3px 1px #0000006c;
 }
 .Nav ul li .SubProdutos .Lista h3 {
     color: var(--cor-branca);
